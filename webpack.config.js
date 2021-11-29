@@ -1,9 +1,9 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (env, args) => {
-  const { mode } = args;
-  const isProduction = mode === 'production';
+  const { mode } = args
+  const isProduction = mode === 'production'
 
   return {
     output: {
@@ -37,6 +37,10 @@ module.exports = (env, args) => {
             ],
           },
         },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
       ],
     },
     plugins: [
@@ -44,5 +48,5 @@ module.exports = (env, args) => {
         template: 'public/index.html',
       }),
     ],
-  };
-};
+  }
+}
