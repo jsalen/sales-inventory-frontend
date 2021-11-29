@@ -19,6 +19,7 @@ module.exports = (env, args) => {
         },
       },
       compress: true,
+      historyApiFallback: true,
     },
     devtool: 'source-map',
     module: {
