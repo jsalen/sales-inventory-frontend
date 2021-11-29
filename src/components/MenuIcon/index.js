@@ -5,7 +5,7 @@ export const MenuIcon = ({ open, setOpen }) => {
   return (
     <div
       className={`container ${open ? 'change' : ''}`}
-      onClick={() => setOpen((prev) => setOpen(!prev))}
+      onClick={() => setOpen((prev) => !prev)}
     >
       <div className='bar1'></div>
       <div className='bar2'></div>
