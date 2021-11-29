@@ -1,9 +1,9 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
-    font-family: Ubuntu, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Nunito, Ubuntu, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   *, *:before, *:after {
@@ -26,8 +26,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #15202b;
-    color: rgb(240, 240, 240);
+    background-color: #e1e1e1;
+    color: #121212;
     height: 100vh;
     margin: 0 auto;
     overscroll-behavior: none;
@@ -40,6 +40,6 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     padding: 0 16px;
   }
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles
