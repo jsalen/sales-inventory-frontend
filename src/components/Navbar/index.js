@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { MenuIcon } from '../MenuIcon'
 
 import {
@@ -14,25 +15,33 @@ import { Nav, Menu } from './styles'
 export const Navbar = () => {
   const [open, setOpen] = useState(false)
 
+  const handleToggle = () => {
+    setOpen((prev) => setOpen(!prev))
+  }
+
   return (
     <Nav open={open}>
       <Menu>
         <MenuIcon open={open} setOpen={setOpen} />
         {open && (
           <>
-            <li>
-              <MdOutlineShoppingCart /> Vender
+            <li onClick={handleToggle}>
+              <Link to='/'>
+                <MdOutlineShoppingCart /> Vender
+              </Link>
             </li>
-            <li>
-              <AiOutlineUser /> Clientes
+            <li onClick={handleToggle}>
+              <Link to='/shopping'>
+                <AiOutlineUser /> Clientes
+              </Link>
             </li>
-            <li>
+            <li onClick={handleToggle}>
               <MdOutlineInventory2 /> Inventario
             </li>
-            <li>
+            <li onClick={handleToggle}>
               <MdOutlineDocumentScanner /> Reportes
             </li>
-            <li>
+            <li onClick={handleToggle}>
               <AiOutlineCloseSquare /> Cerrar Caja
             </li>
           </>
@@ -40,7 +49,7 @@ export const Navbar = () => {
       </Menu>
       {open && (
         <Menu>
-          <li>
+          <li onClick={handleToggle}>
             <MdLogout /> Cerrar sesión
           </li>
         </Menu>
