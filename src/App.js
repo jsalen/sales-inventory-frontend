@@ -1,13 +1,14 @@
-import { Fragment } from 'react';
-import GlobalStyles from './styles/GlobalStyles';
+import { Fragment } from 'react'
+import { Navbar } from './components/Navbar'
+import GlobalStyles from './styles/GlobalStyles'
 
 const App = () => {
   return (
     <Fragment>
       <GlobalStyles />
-      <h1>Holis</h1>
+      <Navbar />
     </Fragment>
-  );
-};
+  )
+}
 
-export default App;
+export default App
