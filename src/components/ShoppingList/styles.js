@@ -58,7 +58,7 @@ export const Footer = styled.footer`
   left: 0;
   right: 0;
 
-  & > *:nth-child(1) {
+  & > button:nth-child(1) {
     grid-column: 1 / -1;
   }
 `
