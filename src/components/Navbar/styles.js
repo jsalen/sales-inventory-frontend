@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Nav = styled.nav`
+  position: absolute;
   height: 100vh;
   width: ${(props) => (props.open ? '180px' : '64px')};
   display: flex;
@@ -10,6 +11,7 @@ export const Nav = styled.nav`
   font-weight: 400;
   background-color: #888888;
   color: #fbfbfb;
+  z-index: 3;
   transition: width 0.15s;
 `
 

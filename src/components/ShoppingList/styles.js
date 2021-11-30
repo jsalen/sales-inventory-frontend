@@ -3,23 +3,11 @@ import styled from 'styled-components'
 export const Aside = styled.aside`
   background-color: #fff;
   padding-top: 16px;
+  position: relative;
 `
 
 export const Title = styled.h2`
   text-align: center;
-`
-
-export const Button = styled.button`
-  width: 100%;
-  height: 45px;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0;
-  font-weight: 400;
-  cursor: pointer;
-  transition: background-color 0.2s;
 `
 
 export const Item = styled.li`
@@ -27,15 +15,10 @@ export const Item = styled.li`
   min-height: 45px;
   display: grid;
   padding: 0 8px;
-  grid-template-columns: 1fr 210px 1fr 1fr;
+  grid-template-columns: 1fr 220px 1fr 1fr;
   align-items: center;
   gap: 8px;
   transition: background-color 0.2s;
-
-  & svg {
-    color: #e61313;
-    cursor: pointer;
-  }
 
   &:hover {
     background-color: #f5f5f5;
@@ -52,4 +35,30 @@ export const Quantity = styled.p`
   text-align: center;
   border: 1px solid #c8c8c8;
   border-radius: 4px;
+`
+
+export const Delete = styled.div`
+  width: 20px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+  color: #e61313;
+`
+
+export const Footer = styled.footer`
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 45px 1fr;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  & > *:nth-child(1) {
+    grid-column: 1 / -1;
+  }
 `
