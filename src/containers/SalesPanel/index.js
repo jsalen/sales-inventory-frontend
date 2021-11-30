@@ -1,5 +1,5 @@
-import { ProductList } from '../../components/ProductList'
+import { ShoppingList } from '../../components/ShoppingList'
 
 export const SalesPanel = () => {
-  return <ProductList />
+  return <ShoppingList />
 }
