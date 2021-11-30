@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     background: transparent;
     border: 0;
     outline: 0;
+    font-family: Nunito, Ubuntu, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   body {
