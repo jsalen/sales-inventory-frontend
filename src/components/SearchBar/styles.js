@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Form = styled.form`
   position: relative;
-  width: 320px;
+  width: 100%;
   height: 35px;
   display: flex;
 `
@@ -13,7 +13,7 @@ export const Input = styled.input`
   border-radius: 4px;
   outline: none;
   padding: 8px;
-  font-size: 16px;
+  font-size: 15px;
 `
 
 export const SearchButton = styled.button`
