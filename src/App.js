@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Layout } from './components/Layout'
 import { Navbar } from './components/Navbar'
+import { Sales } from './Pages/Sales'
 import { Routing } from './routes'
 import GlobalStyles from './styles/GlobalStyles'
 
@@ -9,9 +10,7 @@ const App = () => {
     <Fragment>
       <GlobalStyles />
       <Navbar />
-      <Layout>
-        <Routing />
-      </Layout>
+      <Sales />
     </Fragment>
   )
 }
