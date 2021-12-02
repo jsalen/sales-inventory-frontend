@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav`
   position: absolute;
-  height: 100vh;
-  width: ${(props) => (props.open ? '180px' : '64px')};
+  height: 45px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
