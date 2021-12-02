@@ -32,8 +32,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #e1e1e1;
-    color: #121212;
+    background-color: #F8F7FF;
+    color: #9381FF;
     height: 100vh;
     margin: 0 auto;
     overscroll-behavior: none;
@@ -44,7 +44,6 @@ const GlobalStyles = createGlobalStyle`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     overflow-x: hidden;
     min-height: 100vh;
-    display: flex;
   }
 `
 
