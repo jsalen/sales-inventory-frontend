@@ -6,6 +6,7 @@ import {
   MdOutlineShoppingCart,
   MdOutlineInventory2,
   MdOutlineDocumentScanner,
+  MdOutlineHome,
 } from 'react-icons/md'
 import { AiOutlineUser, AiOutlineCloseSquare } from 'react-icons/ai'
 
@@ -25,6 +26,11 @@ export const Navbar = () => {
         <Menu>
           <li onClick={handleToggle}>
             <Link to='/'>
+              <MdOutlineHome /> Inicio
+            </Link>
+          </li>
+          <li onClick={handleToggle}>
+            <Link to='/sales'>
               <MdOutlineShoppingCart /> Vender
             </Link>
           </li>
