@@ -10,7 +10,7 @@ import {
 } from 'react-icons/md'
 import { AiOutlineUser, AiOutlineCloseSquare } from 'react-icons/ai'
 
-import { Nav, Menu, Btn } from './styles'
+import { Nav, Menu, Btn, Container } from './styles'
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -23,35 +23,35 @@ export const Navbar = () => {
     <Nav open={open}>
       <Btn onClick={handleToggle}>Opciones</Btn>
       {open && (
-        <Menu>
-          <li onClick={handleToggle}>
-            <Link to='/'>
+        <Container onClick={handleToggle}>
+          <Menu>
+            <Link to='/' onClick={() => handleToggle}>
               <MdOutlineHome /> Inicio
             </Link>
-          </li>
-          <li onClick={handleToggle}>
-            <Link to='/sales'>
+
+            <Link to='/sales' onClick={() => handleToggle}>
               <MdOutlineShoppingCart /> Vender
             </Link>
-          </li>
-          <li onClick={handleToggle}>
-            <Link to='/shopping'>
+
+            <Link to='/shopping' onClick={() => handleToggle}>
               <AiOutlineUser /> Clientes
             </Link>
-          </li>
-          <li onClick={handleToggle}>
-            <MdOutlineInventory2 /> Inventario
-          </li>
-          <li onClick={handleToggle}>
-            <MdOutlineDocumentScanner /> Reportes
-          </li>
-          <li onClick={handleToggle}>
-            <AiOutlineCloseSquare /> Cerrar Caja
-          </li>
-          <li onClick={handleToggle}>
-            <MdLogout /> Cerrar sesión
-          </li>
-        </Menu>
+            <Link to='/inventory' onClick={() => handleToggle}>
+              <MdOutlineInventory2 /> Inventario
+            </Link>
+
+            <Link to='/reports' onClick={() => handleToggle}>
+              <MdOutlineDocumentScanner /> Reportes
+            </Link>
+
+            <Link to='/close-cashier' onClick={() => handleToggle}>
+              <AiOutlineCloseSquare /> Cerrar Caja
+            </Link>
+            <Link to='/logout' onClick={() => handleToggle}>
+              <MdLogout /> Cerrar sesión
+            </Link>
+          </Menu>
+        </Container>
       )}
     </Nav>
   )

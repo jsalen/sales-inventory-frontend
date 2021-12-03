@@ -8,15 +8,22 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 16px;
   background-color: #f8f7ff;
   border-bottom: 2px solid #9381ff;
   z-index: 3;
 `
 
-export const Menu = styled.ul`
+export const Container = styled.div`
   position: absolute;
   top: 45px;
+  height: calc(100vh - 45px);
+  width: 100%;
+  background-color: rgba(120, 120, 120, 0.3);
+`
+
+export const Menu = styled.div`
+  position: absolute;
+  top: 0;
   left: 0;
   width: 184px;
   display: flex;
@@ -30,7 +37,7 @@ export const Menu = styled.ul`
   border-radius: 0 4px 4px 0;
   ${swipeDown({ time: '0.15s', type: 'ease-out' })}
 
-  & > li {
+  & > a {
     width: 100%;
     height: 45px;
     display: flex;
@@ -44,7 +51,7 @@ export const Menu = styled.ul`
     }
   }
 
-  & > li:hover {
+  & > a:hover {
     color: #f8f7ff;
     background-color: #b8b8ff;
   }
@@ -53,6 +60,7 @@ export const Menu = styled.ul`
 export const Btn = styled.button`
   width: 75px;
   height: 30px;
+  margin-left: 16px;
   color: #9381ff;
   font-size: 14px;
   font-weight: 400;
