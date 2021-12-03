@@ -10,7 +10,6 @@ import {
 } from './styles'
 
 export const ProductPanel = () => {
-  console.log(products)
   return (
     <Container>
       <FormContainer>
