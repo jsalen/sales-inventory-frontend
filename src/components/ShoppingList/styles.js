@@ -78,6 +78,7 @@ export const Btn = styled.button`
   color: ${(props) => (props.primary ? '#9381FF' : '#F8F7FF')};
   background: ${(props) => (props.primary ? '#F8F7FF' : '#f23546')};
   border: ${(props) => (props.primary ? '1px solid #b8b8ff' : '')};
+  border-radius: 4px;
   cursor: pointer;
 
   &:hover {
