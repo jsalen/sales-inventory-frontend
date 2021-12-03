@@ -9,7 +9,7 @@ export const Form = styled.form`
 
 export const Input = styled.input`
   width: 100%;
-  border: 1px solid #888888;
+  border: 1px solid #b8b8ff;
   border-radius: 4px;
   outline: none;
   padding: 8px;
@@ -26,9 +26,14 @@ export const SearchButton = styled.button`
   display: grid;
   place-items: center;
   font-size: 18px;
-  color: #888888;
-  background-color: #f5f5f5;
-  border: 1px solid #888888;
+  color: #b8b8ff;
+  background-color: #f8f7ff;
+  border: 1px solid #b8b8ff;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
+
+  &:hover {
+    color: #f8f7ff;
+    background-color: #b8b8ff;
+  }
 `

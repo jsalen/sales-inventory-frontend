@@ -3,18 +3,18 @@ import styled from 'styled-components'
 export const Card = styled.article`
   width: 160px;
   height: 140px;
-  background: #555555;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: #fbfbfb;
   padding: 12px 6px;
+  background: #ffd8be;
+  color: #592bbf;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-    background-color: #444444;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f7c6a6;
   }
 `
 
@@ -35,7 +35,7 @@ export const CardFooter = styled.footer`
   & > p {
     display: flex;
     flex-direction: column;
-    border: 1px solid #aaa;
+    font-weight: 300;
 
     & > span {
       font-weight: 700;

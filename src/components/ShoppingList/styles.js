@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Aside = styled.aside`
-  background-color: #fff;
+  background-color: #f8f7ff;
   padding-top: 16px;
   position: relative;
 `
@@ -19,9 +19,11 @@ export const Item = styled.li`
   align-items: center;
   gap: 8px;
   transition: background-color 0.2s;
+  user-select: none;
 
   &:hover {
-    background-color: #f5f5f5;
+    background-color: #b8b8ff;
+    color: #f8f7ff;
   }
 `
 
@@ -45,6 +47,11 @@ export const Delete = styled.div`
   align-content: center;
   cursor: pointer;
   color: #e61313;
+  border-radius: 50%;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `
 
 export const Footer = styled.footer`
@@ -52,13 +59,29 @@ export const Footer = styled.footer`
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 45px 1fr;
+  grid-template-rows: 55px;
+  grid-gap: 8px;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 0 6px 12px;
+`
 
-  & > button:nth-child(1) {
-    grid-column: 1 / -1;
+export const Btn = styled.button`
+  width: 80%;
+  height: 45px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: ${(props) => (props.primary ? '400' : '700')};
+  color: ${(props) => (props.primary ? '#9381FF' : '#F8F7FF')};
+  background: ${(props) => (props.primary ? '#F8F7FF' : '#f23546')};
+  border: ${(props) => (props.primary ? '1px solid #b8b8ff' : '')};
+  cursor: pointer;
+
+  &:hover {
+    color: ${(props) => (props.primary ? '#F8F7FF' : '#F8F7FF')};
+    background: ${(props) => (props.primary ? '#9381FF' : '#f23546')};
   }
 `

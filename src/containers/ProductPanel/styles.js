@@ -1,16 +1,18 @@
 import styled from 'styled-components'
 
-export const Container = styled.main`
+export const Container = styled.section`
   width: 100%;
   height: calc(100vh - 45px);
   display: grid;
   grid-template-rows: 60px 1fr 55px;
+  background-color: #ffeedd;
 `
 
 export const FormContainer = styled.section`
   width: 100%;
   padding: 12px;
-  background-color: #555555;
+  background-color: #ffeedd;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
 
   & > form {
     width: 60%;
@@ -20,7 +22,8 @@ export const FormContainer = styled.section`
 
 export const Footer = styled.footer`
   width: 100%;
-  background-color: #555555;
+  background-color: #ffeedd;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 `
 
 export const CategoryList = styled.ul`
@@ -29,17 +32,20 @@ export const CategoryList = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 3px solid #999999;
 
   & li {
     height: 55px;
     padding: 0 8px;
     display: flex;
     align-items: center;
+    font-weight: 400;
+    color: #592bbf;
     cursor: pointer;
+    border-top: 2px solid transparent;
 
     &:hover {
-      background-color: #444444;
+      background-color: #ffeedd;
+      border-top: 2px solid #592bbf;
     }
   }
 `

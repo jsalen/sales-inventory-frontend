@@ -1,6 +1,14 @@
-import { Button } from '../Button'
-import { AiOutlineUserAdd, AiOutlineDelete } from 'react-icons/ai'
-import { Aside, Item, List, Title, Quantity, Delete, Footer } from './styles'
+import { AiOutlineDelete } from 'react-icons/ai'
+import {
+  Aside,
+  Item,
+  List,
+  Title,
+  Quantity,
+  Delete,
+  Footer,
+  Btn,
+} from './styles'
 
 export const ShoppingList = () => {
   return (
@@ -41,13 +49,8 @@ export const ShoppingList = () => {
         </Item>
       </List>
       <Footer>
-        <Button variant='gray'>
-          <AiOutlineUserAdd size='18' /> Agregar Cliente
-        </Button>
-        <Button hsize='lg'>Pagar</Button>
-        <Button variant='warning' hsize='lg'>
-          Cancelar
-        </Button>
+        <Btn primary>Pagar</Btn>
+        <Btn>Cancelar</Btn>
       </Footer>
     </Aside>
   )
