@@ -5,13 +5,13 @@ export const Container = styled.section`
   height: calc(100vh - 45px);
   display: grid;
   grid-template-rows: 60px 1fr 55px;
-  background-color: #ffeedd;
+  background-color: #d1d1f1;
 `
 
 export const FormContainer = styled.section`
   width: 100%;
   padding: 12px;
-  background-color: #ffeedd;
+  background-color: #9381ff;
   box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
 
   & > form {
@@ -22,7 +22,7 @@ export const FormContainer = styled.section`
 
 export const Footer = styled.footer`
   width: 100%;
-  background-color: #ffeedd;
+  background-color: #9381ff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 `
 
@@ -38,13 +38,14 @@ export const CategoryList = styled.ul`
     padding: 0 8px;
     display: flex;
     align-items: center;
-    font-weight: 400;
-    color: #592bbf;
+    font-weight: 16px;
+    font-weight: 700;
+    color: #f8f7ff;
     cursor: pointer;
     border-top: 2px solid transparent;
 
     &:hover {
-      background-color: #ffeedd;
+      background-color: #b8b8ff;
       border-top: 2px solid #592bbf;
     }
   }

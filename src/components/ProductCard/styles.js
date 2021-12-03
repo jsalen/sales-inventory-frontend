@@ -8,13 +8,14 @@ export const Card = styled.article`
   justify-content: space-between;
   align-items: center;
   padding: 12px 6px;
-  background: #ffd8be;
-  color: #592bbf;
+  background: #9381ff;
+  color: #f8f7ff;
   cursor: pointer;
+  transition: all 0.15s ease;
 
   &:hover {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
-    background-color: #f7c6a6;
+    transform: scale(1.05);
   }
 `
 
