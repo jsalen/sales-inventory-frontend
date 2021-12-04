@@ -33,7 +33,7 @@ export const Navbar = () => {
               <MdOutlineShoppingCart /> Vender
             </Link>
 
-            <Link to='/shopping' onClick={() => handleToggle}>
+            <Link to='/clients' onClick={() => handleToggle}>
               <AiOutlineUser /> Clientes
             </Link>
             <Link to='/inventory' onClick={() => handleToggle}>
