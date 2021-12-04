@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 
 export const Aside = styled.aside`
+  display: grid;
+  max-height: calc(100vh - 45px);
+  grid-template-rows: repeat(auto-fill, 1fr);
   background-color: #f8f7ff;
-  padding-top: 16px;
   position: relative;
 `
 
 export const Title = styled.h2`
   text-align: center;
+  padding-top: 16px;
 `
 
 export const Item = styled.li`
@@ -27,8 +30,14 @@ export const Item = styled.li`
   }
 `
 
+export const ListContainer = styled.div`
+  width: 100%;
+  overflow-y: scroll;
+`
+
 export const List = styled.ul`
   width: 100%;
+  height: auto;
   padding-top: 6px;
 `
 
@@ -61,10 +70,10 @@ export const Footer = styled.footer`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 55px;
   grid-gap: 8px;
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
+  right: 0; */
   padding: 0 6px 12px;
 `
 
@@ -85,4 +94,15 @@ export const Btn = styled.button`
     color: ${(props) => (props.primary ? '#F8F7FF' : '#F8F7FF')};
     background: ${(props) => (props.primary ? '#9381FF' : '#f23546')};
   }
+`
+
+export const AmountContainer = styled.div`
+  width: 100%;
+  border-top: 1px solid rgba(12, 12, 12, 0.1);
+  box-shadow-top: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
+
+  /* position: absolute;
+  bottom: 67px;
+  right: 0;
+  left: 0; */
 `
