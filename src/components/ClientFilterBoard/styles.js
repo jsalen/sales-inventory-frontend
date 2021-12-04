@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   width: 100%;
-  height: 100px;
+  height: 120px;
   display: grid;
   grid-template-columns: 70% 1fr;
   grid-template-rows: 1fr 45px;
