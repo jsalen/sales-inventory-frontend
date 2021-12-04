@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #F8F7FF;
+    background-color: #d1d1f1;
     color: #9381FF;
     height: 100vh;
     margin: 0 auto;
