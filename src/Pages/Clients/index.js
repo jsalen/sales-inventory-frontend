@@ -1,3 +1,11 @@
+import { ClientFilterBoard } from '../../components/ClientFilterBoard'
+
+import { Container } from './styles'
+
 export const Clients = () => {
-  return <h1>Clients</h1>
+  return (
+    <Container>
+      <ClientFilterBoard />
+    </Container>
+  )
 }
