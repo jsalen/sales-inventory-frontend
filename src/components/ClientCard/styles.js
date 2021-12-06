@@ -12,6 +12,7 @@ export const Card = styled.article`
   border-radius: 4px;
   color: #f8f7ff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.15s ease;
 
   &:hover {
     background: #f8f7ff;
