@@ -5,7 +5,7 @@ export const Container = styled.section`
   height: 120px;
   display: grid;
   grid-template-columns: 70% 1fr;
-  grid-template-rows: 1fr 45px;
+  grid-template-rows: 70px 45px;
   grid-template-areas:
     'main aside'
     'main aside';
@@ -32,7 +32,7 @@ export const Button = styled.button`
   padding: 6px 12px;
   border: 1px solid #b8b8ff;
   border-radius: 8px;
-  color: #b8b8ff;
+  color: #9381ff;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
