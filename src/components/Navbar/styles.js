@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { swipeDown } from '../../styles/animations'
+import { fadeIn } from '../../styles/animations'
 
 export const Nav = styled.nav`
   position: relative;
@@ -26,6 +26,7 @@ export const Menu = styled.div`
   top: 0;
   left: 0;
   width: 184px;
+  height: 316px;
   display: flex;
   flex-direction: column;
   background-color: #f8f7ff;
@@ -35,7 +36,7 @@ export const Menu = styled.div`
   font-weight: 400;
   color: #9381ff;
   border-radius: 0 4px 4px 0;
-  ${swipeDown({ time: '0.15s', type: 'ease-out' })}
+  ${fadeIn({ time: '0.25s', type: 'ease' })}
 
   & > a {
     width: 100%;
