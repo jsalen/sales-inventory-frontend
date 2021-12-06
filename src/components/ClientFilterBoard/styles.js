@@ -5,7 +5,7 @@ export const Container = styled.section`
   height: 120px;
   display: grid;
   grid-template-columns: 70% 1fr;
-  grid-template-rows: 70px 45px;
+  grid-template-rows: 70px 1fr;
   grid-template-areas:
     'main aside'
     'main aside';
@@ -48,6 +48,7 @@ export const Alphabet = styled.div`
   grid-column: 1 / 2;
   grid-row: 2 / -1;
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -58,7 +59,7 @@ export const Alphabet = styled.div`
 
   & > a {
     width: 35px;
-    height: 45px;
+    height: inherit;
     display: grid;
     place-items: center;
     transition: all 0.15s ease;
