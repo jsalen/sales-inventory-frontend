@@ -6,6 +6,5 @@ export const Container = styled.section`
   padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 16px;
 `
