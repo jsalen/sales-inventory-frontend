@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   MdOutlineCreate,
   MdOutlineHistory,
@@ -7,29 +8,34 @@ import {
 
 import { Button, Card, Header, MenuIcon, MenuList, Name } from './styles'
 
-export const ClientCard = () => {
+export const ClientCard = ({ client }) => {
+  const { first_name, last_name } = client
+  const [open, setOpen] = useState(false)
+
   return (
     <Card>
       <Header>
         <div>
-          <Name>Joseph Salen</Name>
+          <Name>{`${first_name} ${last_name}`}</Name>
           <Button>Ver detalles</Button>
         </div>
-        <MenuIcon>
+        <MenuIcon onClick={() => setOpen((prev) => !prev)}>
           <div />
           <div />
           <div />
-          <MenuList>
-            <li>
-              <MdOutlineHistory /> Historial
-            </li>
-            <li>
-              <MdOutlineDelete /> Borrar
-            </li>
-            <li>
-              <MdOutlineEdit /> Editar
-            </li>
-          </MenuList>
+          {open && (
+            <MenuList>
+              <li>
+                <MdOutlineHistory /> Historial
+              </li>
+              <li>
+                <MdOutlineDelete /> Borrar
+              </li>
+              <li>
+                <MdOutlineEdit /> Editar
+              </li>
+            </MenuList>
+          )}
         </MenuIcon>
       </Header>
       <footer>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { swipeDown } from '../../styles/animations'
+import { fadeIn } from '../../styles/animations'
 
 export const Card = styled.article`
   width: 100%;
@@ -9,19 +9,26 @@ export const Card = styled.article`
   flex-direction: column;
   justify-content: space-between;
   background: #9381ff;
+  border-radius: 4px;
   color: #f8f7ff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    background: #f8f7ff;
+    border: 1px solid #b8b8ff;
+    color: #9381ff;
+  }
 `
 
 export const Header = styled.header`
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 90% 1fr;
 `
 
 export const Name = styled.p`
-  font-size: 18px;
+  margin-bottom: 6px;
+  font-size: 17px;
   font-weight: 700;
 `
 
@@ -43,13 +50,16 @@ export const Button = styled.button`
 
 export const MenuIcon = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   cursor: pointer;
 
   & > div {
     width: 3px;
     height: 3px;
     background-color: #2e265e;
-    margin: 2px;
+    margin: 1px;
   }
 `
 
@@ -58,13 +68,14 @@ export const MenuList = styled.ul`
   top: 18px;
   right: -5px;
   width: 120px;
+
   display: flex;
   flex-direction: column;
   background-color: #f8f7ff;
   border: 1px solid #9381ff;
   border-radius: 4px;
   color: #9381ff;
-  ${swipeDown({ time: '0.15s', type: 'ease-out' })}
+  ${fadeIn({ time: '0.1s', type: 'ease' })}
 
   & > li {
     width: 100%;
