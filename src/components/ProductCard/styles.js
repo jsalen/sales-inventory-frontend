@@ -1,21 +1,23 @@
 import styled from 'styled-components'
 
 export const Card = styled.article`
-  width: 160px;
+  width: 100%;
   height: 140px;
+  padding: 12px 6px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 6px;
   background: #9381ff;
   color: #f8f7ff;
   cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
   transition: all 0.15s ease;
 
   &:hover {
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
+    background: #f8f7ff;
+    border: 1px solid #b8b8ff;
+    color: #9381ff;
   }
 `
 
@@ -37,6 +39,8 @@ export const CardFooter = styled.footer`
     display: flex;
     flex-direction: column;
     font-weight: 300;
+    font-size: 16px;
+    color: #2e265e;
 
     & > span {
       font-weight: 700;
