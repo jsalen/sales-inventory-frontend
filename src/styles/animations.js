@@ -6,11 +6,25 @@ const swipeDownKeyFrame = keyframes`
   }
 
   100% {
-    height: 275px;
+    height: 100%;
+  }
+`
+
+const fadeInKeyframe = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 `
 
 export const swipeDown = ({ time = '0.15s', type = 'ease' } = {}) =>
   css`
     animation: ${time} ${swipeDownKeyFrame} ${type};
+  `
+
+export const fadeIn = ({ time = '0.15s', type = 'ease' } = {}) =>
+  css`
+    animation: ${time} ${fadeInKeyframe} ${type};
   `
