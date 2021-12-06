@@ -52,7 +52,6 @@ export const Alphabet = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 8px;
   background-color: #b8b8ff;
   color: #f8f7ff;
   font-weight: 700;
