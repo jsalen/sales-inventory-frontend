@@ -1,3 +1,14 @@
 export const InventoryTable = () => {
-  return <h1>Table</h1>
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio ($)</th>
+          <th>Cant. Disp.</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+    </table>
+  )
 }
