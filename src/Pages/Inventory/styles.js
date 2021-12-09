@@ -9,7 +9,7 @@ export const Container = styled.section`
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-rows: 120px auto 1fr;
   grid-gap: 16px;
 `
 
