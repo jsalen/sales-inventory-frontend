@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const VARIANT = {
   primary: '#09f',
-  warning: '#d61616',
+  warning: 'rgba(219,43,18,0.8)',
   gray: '#888888',
 }
 
