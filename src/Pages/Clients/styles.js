@@ -4,7 +4,7 @@ export const Container = styled.section`
   width: 100%;
   height: calc(100vh - 45px);
   padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-rows: 120px 1fr;
+  grid-gap: 12px;
 `
