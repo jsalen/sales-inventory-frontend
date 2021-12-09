@@ -1,7 +1,8 @@
 import { FilterBoard } from '../../components/FilterBoard'
+import { Button } from '../../components/Button'
 import { InventoryTable } from '../../containers/InventoryTable'
 
-import { Container } from './styles'
+import { Btn, Container, Footer, InventoryContainer } from './styles'
 
 export const Inventory = () => {
   return (
@@ -11,7 +12,13 @@ export const Inventory = () => {
         length='120'
         placeHolder='Producto...'
       />
-      <InventoryTable />
+      <InventoryContainer>
+        <InventoryTable />
+      </InventoryContainer>
+      <Footer>
+        <Btn>Regresar</Btn>
+        <Btn primary>Crear</Btn>
+      </Footer>
     </Container>
   )
 }
