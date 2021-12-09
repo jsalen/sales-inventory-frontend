@@ -20,6 +20,7 @@ export const TableHead = styled.thead`
   background-color: #f8f7ff;
   font-weight: 700;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  z-index: 2;
 `
 
 export const TableBody = styled.tbody`
@@ -57,6 +58,7 @@ export const TableActions = styled.td`
 `
 
 export const Button = styled.button`
+  position: relative;
   width: 30px;
   height: 30px;
   display: flex;
@@ -72,5 +74,22 @@ export const Button = styled.button`
     background-color: ${(props) => VARIANT[props.variant] || VARIANT.warning};
     color: #f8f7ff;
     border: 0;
+  }
+`
+
+export const Tooltip = styled.span`
+  position: absolute;
+  bottom: 100%;
+  z-index: 3;
+  visibility: hidden;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #f8f7ff;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 4px;
+
+  ${Button}:hover & {
+    visibility: visible;
   }
 `

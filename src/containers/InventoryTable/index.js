@@ -7,6 +7,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
+  Tooltip,
 } from './styles'
 
 export const InventoryTable = () => {
@@ -27,12 +28,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -43,12 +47,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -59,12 +66,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -75,12 +85,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -91,12 +104,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -107,12 +123,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -123,12 +142,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -139,12 +161,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -155,12 +180,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -171,12 +199,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -187,12 +218,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
@@ -203,12 +237,15 @@ export const InventoryTable = () => {
           <TableCell center>10</TableCell>
           <TableActions>
             <Button variant='success'>
+              <Tooltip>Editar</Tooltip>
               <MdOutlineEdit size='16' />
             </Button>
             <Button variant='warning'>
+              <Tooltip>Eliminar</Tooltip>
               <MdOutlineDelete size='16' />
             </Button>
             <Button variant='primary'>
+              <Tooltip>Ingresar</Tooltip>
               <MdOutlineAdd size='16' />
             </Button>
           </TableActions>
