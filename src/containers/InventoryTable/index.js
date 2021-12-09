@@ -1,3 +1,4 @@
+import { products } from '../../db'
 import { MdOutlineEdit, MdOutlineDelete, MdOutlineAdd } from 'react-icons/md'
 import {
   Button,
@@ -22,234 +23,27 @@ export const InventoryTable = () => {
         </tr>
       </TableHead>
       <TableBody>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
-        <TableRow>
-          <TableCell lg>Producto</TableCell>
-          <TableCell center>$100</TableCell>
-          <TableCell center>10</TableCell>
-          <TableActions>
-            <Button variant='success'>
-              <Tooltip>Editar</Tooltip>
-              <MdOutlineEdit size='16' />
-            </Button>
-            <Button variant='warning'>
-              <Tooltip>Eliminar</Tooltip>
-              <MdOutlineDelete size='16' />
-            </Button>
-            <Button variant='primary'>
-              <Tooltip>Ingresar</Tooltip>
-              <MdOutlineAdd size='16' />
-            </Button>
-          </TableActions>
-        </TableRow>
+        {products.map((product) => (
+          <TableRow key={product.id}>
+            <TableCell lg>{product.name}</TableCell>
+            <TableCell center>${product.price}</TableCell>
+            <TableCell center>{product.stock}</TableCell>
+            <TableActions>
+              <Button variant='success'>
+                <Tooltip>Editar</Tooltip>
+                <MdOutlineEdit size='16' />
+              </Button>
+              <Button variant='warning'>
+                <Tooltip>Eliminar</Tooltip>
+                <MdOutlineDelete size='16' />
+              </Button>
+              <Button variant='primary'>
+                <Tooltip>Ingresar</Tooltip>
+                <MdOutlineAdd size='16' />
+              </Button>
+            </TableActions>
+          </TableRow>
+        ))}
       </TableBody>
     </Table>
   )
