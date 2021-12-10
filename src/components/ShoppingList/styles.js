@@ -70,10 +70,6 @@ export const Footer = styled.footer`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 55px;
   grid-gap: 8px;
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0; */
   padding: 0 6px 12px;
 `
 
@@ -100,9 +96,4 @@ export const AmountContainer = styled.div`
   width: 100%;
   border-top: 1px solid rgba(12, 12, 12, 0.1);
   box-shadow-top: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
-
-  /* position: absolute;
-  bottom: 67px;
-  right: 0;
-  left: 0; */
 `
