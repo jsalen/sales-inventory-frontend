@@ -22,3 +22,29 @@ export const Header = styled.header`
 export const Name = styled.p`
   font-weight: 700;
 `
+
+export const Date = styled.div`
+  text-align: right;
+`
+
+export const Content = styled.main`
+  width: 100%;
+  height: inherit;
+  overflow-y: scroll;
+`
+
+export const Footer = styled.footer`
+  width: 100%;
+  padding-right: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  & p {
+    font-size: 20px;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+`
