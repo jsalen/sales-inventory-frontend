@@ -32,6 +32,7 @@ export const TableBody = styled.tbody`
 export const TableRow = styled.tr`
   width: 100%;
   height: 45px;
+  color: #2e265e;
   transition: all 0.25s ease;
 
   &:nth-child(even) {
