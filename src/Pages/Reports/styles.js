@@ -8,7 +8,7 @@ export const Container = styled.section`
   padding: 24px;
   display: grid;
   justify-content: center;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 70%;
   grid-template-rows: 90px 1fr 45px;
 `
 
@@ -20,4 +20,15 @@ export const FilterContainer = styled.section`
   align-items: center;
   color: #f8f7ff;
   background: #9381ff;
+`
+
+export const OrderContainer = styled.section`
+  grid-area: 2/1/-1/2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: #f8f7ff;
+  overflow-y: scroll;
 `

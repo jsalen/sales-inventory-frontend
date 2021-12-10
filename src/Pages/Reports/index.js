@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { DateFilter } from '../../components/DateFilter'
+import { OrderCard } from '../../components/OrderCard'
 
-import { Container, FilterContainer } from './styles'
+import { Container, FilterContainer, OrderContainer } from './styles'
 
 export const Reports = () => {
   const [startDate, setStartDate] = useState(new Date())
@@ -24,6 +25,9 @@ export const Reports = () => {
           handleDelete={handleDelete}
         />
       </FilterContainer>
+      <OrderContainer>
+        <OrderCard />
+      </OrderContainer>
     </Container>
   )
 }
