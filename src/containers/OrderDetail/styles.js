@@ -39,6 +39,7 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  border-top: 1px solid #e6e6e6;
 
   & p {
     font-size: 20px;

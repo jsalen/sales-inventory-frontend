@@ -9,7 +9,7 @@ export const Container = styled.section`
   display: grid;
   justify-content: center;
   grid-template-columns: 30% 70%;
-  grid-template-rows: 90px 1fr 70px;
+  grid-template-rows: 90px 1fr;
 `
 
 export const FilterContainer = styled.section`
@@ -34,10 +34,16 @@ export const OrderContainer = styled.section`
 `
 
 export const DetailsContainer = styled.section`
-  grid-area: 1/2/3/-1;
+  grid-area: 1/2/-1/-1;
   width: 100%;
   display: grid;
   grid-template-rows: 90px 1fr 55px;
-  grid-gap: 8px;
   background: #f8f7ff;
+`
+
+export const Footer = styled.footer`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `

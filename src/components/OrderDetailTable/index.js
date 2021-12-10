@@ -12,7 +12,7 @@ export const OrderDetailTable = () => {
         </tr>
       </TableHead>
       <TableBody>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+        {[1, 2, 3].map((item) => (
           <TableRow key={item}>
             <TableCell lg>Producto</TableCell>
             <TableCell center>$10</TableCell>
