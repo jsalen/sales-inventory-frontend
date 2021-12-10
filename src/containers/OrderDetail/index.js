@@ -1,15 +1,23 @@
 import { OrderDetailTable } from '../../components/OrderDetailTable'
-import { Content, Date, Footer, Header, Name } from './styles'
+import { Content, Date, Footer, Header, Info, Name } from './styles'
 
 export const OrderDetail = () => {
   return (
     <>
       <Header>
         <h2>Orden #1</h2>
-        <div>
-          <p>Vendido por:</p>
-          <Name>Joseph Salen</Name>
-        </div>
+        <Info>
+          <div>
+            <p>
+              Vendido por: <span>Joseph Salen</span>
+            </p>
+          </div>
+          <div>
+            <p>
+              Cliente: <span>Sin Identificar</span>
+            </p>
+          </div>
+        </Info>
         <Date>
           <p>12/12/2021</p>
           <p>11:53 AM</p>
