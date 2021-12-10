@@ -37,7 +37,7 @@ export const Header = styled.header`
   & p {
     font-size: 14px;
     font-weight: 300;
-    color: #eae3f0;
+    color: #2e265e;
     ${Card}:hover & {
       color: #9381ff;
     }
@@ -47,7 +47,7 @@ export const Header = styled.header`
 export const Footer = styled.footer`
   width: 98px;
   font-weight: 300;
-  color: #eae3f0;
+  color: #2e265e;
   align-self: center;
 
   ${Card}:hover & {
