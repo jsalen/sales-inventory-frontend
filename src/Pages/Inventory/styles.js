@@ -15,6 +15,7 @@ export const Container = styled.section`
 
 export const InventoryContainer = styled.section`
   width: 100%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
 `
 
