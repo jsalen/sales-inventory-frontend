@@ -44,7 +44,7 @@ export const Navbar = () => {
               <MdOutlineDocumentScanner /> Reportes
             </Link>
 
-            <Link to='/close-cashier' onClick={() => handleToggle}>
+            <Link to='/close' onClick={() => handleToggle}>
               <AiOutlineCloseSquare /> Cerrar Caja
             </Link>
             <Link to='/logout' onClick={() => handleToggle}>

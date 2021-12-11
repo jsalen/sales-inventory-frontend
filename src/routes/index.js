@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { Clients } from '../Pages/Clients'
+import { Close } from '../Pages/Close'
 import { Home } from '../Pages/Home'
 import { Inventory } from '../Pages/Inventory'
 import { Reports } from '../Pages/Reports'
@@ -13,6 +14,7 @@ export const Routing = () => {
       <Route path='/clients' element={<Clients />} />
       <Route path='/inventory' element={<Inventory />} />
       <Route path='/reports' element={<Reports />} />
+      <Route path='/close' element={<Close />} />
     </Routes>
   )
 }
