@@ -34,10 +34,12 @@ export const Name = styled.p`
 `
 
 export const Button = styled.button`
+  padding-bottom: 4px;
   display: flex;
   align-items: center;
   color: #2e265e;
   font-weight: ${(props) => (props.bold ? '700' : 400)};
+  border: 1px solid transparent;
   cursor: pointer;
 
   & > svg {
