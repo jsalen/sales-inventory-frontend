@@ -1,10 +1,13 @@
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../features/cart/cartSlice'
 import { Card, CardFooter, CardHeader } from './styles'
 
 export const ProductCard = ({ product }) => {
   const { name, price, stock } = product
+  const dispatch = useDispatch()
 
   return (
-    <Card>
+    <Card onClick={() => dispatch(addToCart(product))}>
       <CardHeader>{name}</CardHeader>
       <CardFooter>
         <p>

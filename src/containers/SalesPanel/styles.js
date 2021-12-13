@@ -18,7 +18,7 @@ export const Item = styled.li`
   min-height: 45px;
   display: grid;
   padding: 0 8px;
-  grid-template-columns: 1fr 6fr 1fr 1fr;
+  grid-template-columns: 1fr 60px 20px;
   align-items: center;
   gap: 8px;
   transition: background-color 0.2s;
