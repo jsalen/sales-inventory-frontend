@@ -9,18 +9,15 @@ export const Container = styled.section`
 export const Header = styled.header`
   height: 90px;
   display: flex;
+  padding: 0 30px;
   justify-content: space-between;
   align-items: center;
+  color: #2e265e;
   border-bottom: 1px solid #e6e6e6;
-  padding: 0 30px;
 
   & h2 {
     font-weight: 700;
   }
-`
-
-export const Name = styled.p`
-  font-weight: 700;
 `
 
 export const Date = styled.div`
@@ -35,14 +32,15 @@ export const Content = styled.main`
 
 export const Footer = styled.footer`
   width: 100%;
-  padding-right: 30px;
+  padding: 0 30px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   border-top: 1px solid #e6e6e6;
 
   & p {
-    font-size: 20px;
+    font-size: 18px;
+    color: #2e265e;
 
     & span {
       font-weight: 700;

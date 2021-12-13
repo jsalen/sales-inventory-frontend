@@ -1,5 +1,5 @@
 import { OrderDetailTable } from '../../components/OrderDetailTable'
-import { Content, Date, Footer, Header, Info, Name } from './styles'
+import { Content, Date, Footer, Header, Info } from './styles'
 
 export const OrderDetail = () => {
   return (
@@ -27,6 +27,12 @@ export const OrderDetail = () => {
         <OrderDetailTable />
       </Content>
       <Footer>
+        <p>
+          Método de Pago: <span>Efectivo</span>
+        </p>
+        <p>
+          Vuelto: <span>$0.00</span>
+        </p>
         <p>
           Monto total: <span>$100</span>
         </p>
