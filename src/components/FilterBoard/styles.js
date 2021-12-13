@@ -22,6 +22,15 @@ export const Header = styled.header`
   padding: 0 24px;
 `
 
+export const Select = styled.select`
+  width: 212px;
+  padding: 3px;
+  background: #f8f7ff;
+  border: 1px solid #b8b8ff;
+  border-radius: 4px;
+  color: #2e265e;
+`
+
 export const Title = styled.p`
   font-weight: 700;
 `

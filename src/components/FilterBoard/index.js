@@ -1,8 +1,16 @@
 import { SearchBar } from '../SearchBar'
 
-import { Container, Title, Alphabet, Search, Header, Button } from './styles'
+import {
+  Container,
+  Title,
+  Alphabet,
+  Search,
+  Header,
+  Button,
+  Select,
+} from './styles'
 
-export const FilterBoard = ({ title, length, placeHolder }) => {
+export const FilterBoard = ({ title, length, placeHolder, categories }) => {
   return (
     <Container>
       <Header>
@@ -10,6 +18,17 @@ export const FilterBoard = ({ title, length, placeHolder }) => {
           <Title>{title}</Title>
           <p>{length}</p>
         </div>
+        {categories && (
+          <div>
+            <Title>Categoria:</Title>
+            <Select>
+              <option>Bebidas</option>
+              <option>Chucheria</option>
+              <option>Pan</option>
+              <option>Aseo</option>
+            </Select>
+          </div>
+        )}
         <Button>Ver todos</Button>
       </Header>
       <Alphabet>

@@ -11,6 +11,7 @@ export const Inventory = () => {
         title='Cantidad de Productos'
         length='120'
         placeHolder='Producto...'
+        categories
       />
       <InventoryContainer>
         <InventoryTable />
