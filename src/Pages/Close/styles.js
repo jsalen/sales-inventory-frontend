@@ -88,6 +88,7 @@ export const CashDetails = styled.section`
     display: flex;
     justify-content: space-between;
     font-weight: 500;
+    text-transform: uppercase;
   }
 
   & > article {
