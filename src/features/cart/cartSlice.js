@@ -11,12 +11,21 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       state.products.push(action.payload)
+      state.total = state.products.reduce(
+        (accum, { price }) => accum + price,
+        0
+      )
     },
     removeFromCart: (state, action) => {
       state.products.splice(action.payload, 1)
+      state.total = state.products.reduce(
+        (accum, { price }) => accum + price,
+        0
+      )
     },
     clearCart: (state) => {
       state.products = []
+      state.total = 0
     },
   },
 })

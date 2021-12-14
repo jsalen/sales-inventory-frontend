@@ -17,16 +17,11 @@ import {
 
 export const SalesPanel = () => {
   const products = useSelector((state) => state.cart.products)
+  const total = useSelector((state) => state.cart.total)
   const dispatch = useDispatch()
 
-  const totalDollars = () => {
-    const sum = products.reduce((accum, { price }) => accum + price, 0)
-
-    return sum.toFixed(2)
-  }
-
   const totalBolivares = () => {
-    const bs = totalDollars() * 4.8
+    const bs = total * 4.8
 
     return bs.toFixed(2)
   }
@@ -49,7 +44,7 @@ export const SalesPanel = () => {
       </ListContainer>
       <AmountContainer>
         <CartAmount
-          totalDollars={totalDollars()}
+          totalDollars={total.toFixed(2)}
           totalBolivares={totalBolivares()}
         />
       </AmountContainer>
