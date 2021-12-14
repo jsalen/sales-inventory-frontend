@@ -37,11 +37,11 @@ export const SalesPanel = () => {
       <ListContainer>
         {products.length > 0 ? (
           <List>
-            {products.map((product) => (
-              <Item key={product.id}>
+            {products.map((product, idx) => (
+              <Item key={idx}>
                 <p>{product.name}</p>
                 <p>${product.price}</p>
-                <Delete onClick={() => dispatch(removeFromCart(product.id))}>
+                <Delete onClick={() => dispatch(removeFromCart(idx))}>
                   <AiOutlineDelete size='17' />
                 </Delete>
               </Item>
