@@ -35,21 +35,17 @@ export const SalesPanel = () => {
     <Aside>
       <Title>Venta</Title>
       <ListContainer>
-        {products.length > 0 ? (
-          <List>
-            {products.map((product, idx) => (
-              <Item key={idx}>
-                <p>{product.name}</p>
-                <p>${product.price}</p>
-                <Delete onClick={() => dispatch(removeFromCart(idx))}>
-                  <AiOutlineDelete size='17' />
-                </Delete>
-              </Item>
-            ))}
-          </List>
-        ) : (
-          <p>No hay productos en el carrito</p>
-        )}
+        <List>
+          {products.map((product, idx) => (
+            <Item key={idx}>
+              <p>{product.name}</p>
+              <p>${product.price}</p>
+              <Delete onClick={() => dispatch(removeFromCart(idx))}>
+                <AiOutlineDelete size='17' />
+              </Delete>
+            </Item>
+          ))}
+        </List>
       </ListContainer>
       <AmountContainer>
         <CartAmount
