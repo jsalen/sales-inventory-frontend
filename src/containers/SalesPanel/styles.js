@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Aside = styled.aside`
   display: grid;
   max-height: calc(100vh - 45px);
-  grid-template-rows: 90px 1fr 124px;
+  grid-template-rows: 60px 1fr 124px;
   background-color: #f8f7ff;
   position: relative;
 `
