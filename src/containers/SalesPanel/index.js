@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { removeFromCart } from '../../features/cart/cartSlice'
+import { removeFromCart, clearCart } from '../../features/cart/cartSlice'
 import { CartAmount } from '../../components/CartAmount/index'
 
 import { AiOutlineDelete } from 'react-icons/ai'
@@ -55,7 +55,7 @@ export const SalesPanel = () => {
       </AmountContainer>
       <Footer>
         <Btn primary>Pagar</Btn>
-        <Btn>Cancelar</Btn>
+        <Btn onClick={() => dispatch(clearCart())}>Cancelar</Btn>
       </Footer>
     </Aside>
   )
