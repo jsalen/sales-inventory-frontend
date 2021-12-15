@@ -29,17 +29,6 @@ export const ProductPanel = () => {
           <ProductCard key={product.id} product={product} />
         ))}
       </ProductList>
-      <Footer>
-        <CategoryList>
-          <li>Popular</li>
-          <li>Bebidas</li>
-          <li>Aseo</li>
-          <li>Chucheria</li>
-          <li>Helados</li>
-          <li>Cuidado Personal</li>
-          <li>Utilería</li>
-        </CategoryList>
-      </Footer>
     </Container>
   )
 }
