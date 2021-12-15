@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { fadeIn } from '../../styles/animations'
 
 export const Container = styled.main`
+  position: relative;
   width: 100%;
   display: grid;
   grid-template-columns: 75% 1fr;

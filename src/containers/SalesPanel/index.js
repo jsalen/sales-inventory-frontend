@@ -15,7 +15,7 @@ import {
   ListContainer,
 } from './styles'
 
-export const SalesPanel = () => {
+export const SalesPanel = ({ setOpenModal }) => {
   const products = useSelector((state) => state.cart.products)
   const total = useSelector((state) => state.cart.total)
   const dispatch = useDispatch()
@@ -24,6 +24,10 @@ export const SalesPanel = () => {
     const bs = total * 4.8
 
     return bs.toFixed(2)
+  }
+
+  const handleSubmit = () => {
+    setOpenModal((prev) => !prev)
   }
 
   return (
@@ -49,7 +53,9 @@ export const SalesPanel = () => {
         />
       </AmountContainer>
       <Footer>
-        <Btn primary>Pagar</Btn>
+        <Btn primary onClick={handleSubmit}>
+          Pagar
+        </Btn>
         <Btn onClick={() => dispatch(clearCart())}>Cancelar</Btn>
       </Footer>
     </Aside>
