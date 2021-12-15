@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Modal } from '../../components/Modal'
+import { SalesModal } from '../../components/SalesModal'
 import { ProductPanel } from '../../containers/ProductPanel'
 import { SalesPanel } from '../../containers/SalesPanel'
 
@@ -15,7 +16,11 @@ export const Sales = () => {
       <ProductPanel />
       {products.length > 0 && <SalesPanel setOpenModal={setOpenModal} />}
 
-      {openModal && <Modal setOpenModal={setOpenModal}>Ventana Modal</Modal>}
+      {openModal && (
+        <Modal setOpenModal={setOpenModal}>
+          <SalesModal setOpenModal={setOpenModal} />
+        </Modal>
+      )}
     </Container>
   )
 }
