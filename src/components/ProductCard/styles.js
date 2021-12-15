@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { fadeIn } from '../../styles/animations'
 
 export const Card = styled.article`
   width: 100%;
@@ -13,6 +14,7 @@ export const Card = styled.article`
   cursor: pointer;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
   transition: all 0.15s ease;
+  ${fadeIn({ time: '0.4s' })}
 
   &:hover {
     background: #f8f7ff;
