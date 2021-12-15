@@ -27,7 +27,7 @@ export const ProductList = styled.section`
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(140px, 1fr));
   grid-gap: 12px;
   overflow-y: scroll;
 `
