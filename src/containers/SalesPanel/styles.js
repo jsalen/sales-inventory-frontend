@@ -69,8 +69,6 @@ export const Footer = styled.footer`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 55px;
-  grid-gap: 8px;
-  padding: 0 6px 12px;
 `
 
 export const Btn = styled.button`
@@ -92,8 +90,14 @@ export const Btn = styled.button`
   }
 `
 
-export const AmountContainer = styled.div`
+export const AmountContainer = styled.section`
   width: 100%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
   border-top: 1px solid rgba(12, 12, 12, 0.1);
   box-shadow-top: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
 `

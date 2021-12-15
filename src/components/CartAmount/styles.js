@@ -5,7 +5,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 6px 8px;
   font-size: 18px;
 
   & > p {
@@ -15,4 +14,12 @@ export const Container = styled.div`
   & > span {
     font-weight: 700;
   }
+`
+
+export const Button = styled.button`
+  padding: 4px 8px 0;
+  border-bottom: 1px dashed #2e265e;
+  color: #9381ff;
+  cursor: pointer;
+  font-size: 16px;
 `
