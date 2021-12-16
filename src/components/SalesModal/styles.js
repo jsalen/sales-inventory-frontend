@@ -26,13 +26,13 @@ export const Select = styled.select`
   padding: 8px;
   font-size: 15px;
   background: #f8f7ff;
-  border: 1px solid #b8b8ff;
+  border: 1px solid #cecece;
   border-radius: 4px;
   color: #2e265e;
   cursor: pointer;
 
   &:focus {
-    outline: 1px solid #2e265e;
+    outline: 1px solid #b8b8ff;
   }
 `
 
@@ -52,12 +52,24 @@ export const Section = styled.section`
     width: 120px;
     height: 24px;
     border: 0;
-    border-bottom: 1px dashed #2e265e;
+    border-bottom: 1px dashed #cecece;
     background: #f8f7ff;
     text-align: right;
 
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type='number'] {
+      -moz-appearance: textfield;
+    }
+
     &:focus {
-      border-bottom: 1px solid #2e265e;
+      border-bottom: 1px solid #b8b8ff;
       outline: 0;
     }
   }
@@ -67,7 +79,7 @@ export const TotalBox = styled.section`
   width: 80%;
   padding: 16px;
   margin: 0 auto;
-  border: 1px solid #2e265e;
+  border: 1px solid #cecece;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -107,5 +119,15 @@ export const Btn = styled.button`
   &:hover {
     color: ${(props) => (props.primary ? '#F8F7FF' : '#F8F7FF')};
     background: ${(props) => (props.primary ? '#9381FF' : '#f23546')};
+  }
+
+  &:disabled {
+    border: 1px solid #919191;
+    color: #919191;
+    cursor: not-allowed;
+
+    &:hover {
+      background: none;
+    }
   }
 `

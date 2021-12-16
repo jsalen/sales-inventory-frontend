@@ -41,8 +41,10 @@ export const SalesModal = ({ setOpenModal }) => {
         <Section>
           <p>Monto Forma de pago:</p>
           <input
-            type='text'
+            type='number'
             name='amount'
+            pattern='[0-9]+'
+            min='0'
             placeholder={total}
             onChange={handleChange}
           />
@@ -64,7 +66,7 @@ export const SalesModal = ({ setOpenModal }) => {
         </TotalBox>
       </Content>
       <Footer>
-        <Btn primary onClick={handleClick}>
+        <Btn primary onClick={handleClick} disabled={total > totalPaid}>
           Confirmar
         </Btn>
         <Btn onClick={handleClick}>Cancelar</Btn>
