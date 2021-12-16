@@ -1,13 +1,17 @@
 import { useSelector } from 'react-redux'
 import { ProductCard } from '../../components/ProductCard'
 import { SearchBar } from '../../components/SearchBar/index'
-import useFilterProducts from '../../hooks/useFilterProducts'
+import useFilterData from '../../hooks/useFilterData'
 
 import { Container, FormContainer, ProductList } from './styles'
 
 export const ProductPanel = () => {
   const products = useSelector((state) => state.products.products)
-  const { query, setQuery, filteredProducts } = useFilterProducts(products)
+  const {
+    query,
+    setQuery,
+    filteredData: filteredProducts,
+  } = useFilterData(products)
 
   return (
     <Container>
