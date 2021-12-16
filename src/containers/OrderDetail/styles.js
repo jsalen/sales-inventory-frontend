@@ -27,7 +27,7 @@ export const Date = styled.div`
 export const Content = styled.main`
   width: 100%;
   height: inherit;
-  overflow-y: scroll;
+  overflow-y: auto;
 `
 
 export const Footer = styled.footer`

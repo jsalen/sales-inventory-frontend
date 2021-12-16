@@ -29,7 +29,7 @@ export const TableRow = styled.tr`
   color: #2e265e;
   transition: all 0.25s ease;
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background: #b8b8ff;
   }
 
