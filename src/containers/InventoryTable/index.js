@@ -1,4 +1,3 @@
-import { products } from '../../db'
 import { MdOutlineEdit, MdOutlineDelete, MdOutlineAdd } from 'react-icons/md'
 import {
   Button,
@@ -11,7 +10,7 @@ import {
   Tooltip,
 } from './styles'
 
-export const InventoryTable = () => {
+export const InventoryTable = ({ products }) => {
   return (
     <Table>
       <TableHead>
