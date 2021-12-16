@@ -2,10 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   width: 100%;
-  height: 120px;
+  height: 96px;
   display: grid;
   grid-template-columns: 70% 1fr;
-  grid-template-rows: 70px 1fr;
   grid-template-areas:
     'main aside'
     'main aside';
@@ -15,11 +14,15 @@ export const Container = styled.section`
 
 export const Header = styled.header`
   grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  grid-row: 1 / -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+
+  & h1 {
+    font-size: 24px;
+  }
 `
 
 export const Select = styled.select`
@@ -53,38 +56,12 @@ export const Button = styled.button`
   }
 `
 
-export const Alphabet = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 2 / -1;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #b8b8ff;
-  color: #f8f7ff;
-  font-weight: 700;
-
-  & > a {
-    width: 35px;
-    height: inherit;
-    display: grid;
-    place-items: center;
-    transition: all 0.15s ease;
-  }
-
-  & > a:hover {
-    background-color: #f8f7ff;
-    color: #b8b8ff;
-  }
-`
-
 export const Search = styled.div`
   grid-column: 2 / -1;
   grid-row: 1 / -1;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 12px;
   background-color: #9381ff;
   color: #f8f7ff;

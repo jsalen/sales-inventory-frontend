@@ -16,8 +16,7 @@ export const Clients = () => {
   return (
     <Container>
       <FilterBoard
-        title='Cantidad de Clientes'
-        length={clients.length}
+        title='Clientes'
         placeHolder='Cliente...'
         query={query}
         setQuery={setQuery}

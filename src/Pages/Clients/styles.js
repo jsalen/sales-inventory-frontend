@@ -7,6 +7,6 @@ export const Container = styled.section`
   padding: 24px;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 120px 1fr;
+  grid-template-rows: 96px 1fr;
   grid-gap: 12px;
 `
