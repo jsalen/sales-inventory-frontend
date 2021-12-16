@@ -3,13 +3,7 @@ import { ProductCard } from '../../components/ProductCard'
 import { SearchBar } from '../../components/SearchBar/index'
 import useFilterProducts from '../../hooks/useFilterProducts'
 
-import {
-  CategoryList,
-  Container,
-  Footer,
-  FormContainer,
-  ProductList,
-} from './styles'
+import { Container, FormContainer, ProductList } from './styles'
 
 export const ProductPanel = () => {
   const products = useSelector((state) => state.products.products)
