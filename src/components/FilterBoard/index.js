@@ -10,7 +10,14 @@ import {
   Select,
 } from './styles'
 
-export const FilterBoard = ({ title, length, placeHolder, categories }) => {
+export const FilterBoard = ({
+  title,
+  length,
+  placeHolder,
+  categories,
+  query,
+  setQuery,
+}) => {
   return (
     <Container>
       <Header>
@@ -64,7 +71,7 @@ export const FilterBoard = ({ title, length, placeHolder, categories }) => {
         <header>
           <p>Búsqueda Rápida</p>
         </header>
-        <SearchBar text={placeHolder} />
+        <SearchBar text={placeHolder} query={query} setQuery={setQuery} />
       </Search>
     </Container>
   )

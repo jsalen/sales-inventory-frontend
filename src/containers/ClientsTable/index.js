@@ -1,8 +1,7 @@
 import { ClientCard } from '../../components/ClientCard'
-import { clients } from '../../db'
 import { Container } from './styles'
 
-export const ClientsTable = () => {
+export const ClientsTable = ({ clients }) => {
   return (
     <Container>
       {clients.map((client) => (

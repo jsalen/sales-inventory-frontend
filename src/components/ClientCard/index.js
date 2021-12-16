@@ -9,14 +9,14 @@ import {
 import { Button, Card, Header, MenuIcon, MenuList, Name } from './styles'
 
 export const ClientCard = ({ client }) => {
-  const { first_name, last_name } = client
+  const { name, last_name } = client
   const [open, setOpen] = useState(false)
 
   return (
     <Card>
       <Header>
         <div>
-          <Name>{`${first_name} ${last_name}`}</Name>
+          <Name>{`${last_name}, ${name}`}</Name>
           <Button>Ver detalles</Button>
         </div>
         <MenuIcon onClick={() => setOpen((prev) => !prev)}>
