@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { FilterBoard } from '../../components/FilterBoard'
 import { ClientsTable } from '../../containers/ClientsTable'
-import useFilterData from '../../hooks/useFilterData'
+import useFilterClients from '../../hooks/useFilterClients'
 
 import { Container } from './styles'
 
@@ -11,7 +11,7 @@ export const Clients = () => {
     query,
     setQuery,
     filteredData: filteredClients,
-  } = useFilterData(clients)
+  } = useFilterClients(clients)
 
   return (
     <Container>
