@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Aside = styled.aside`
   display: grid;
   max-height: calc(100vh - 45px);
-  grid-template-rows: 60px 1fr 124px;
+  grid-template-rows: 60px 1fr 90px 65px;
   background-color: #f8f7ff;
   position: relative;
 `
@@ -30,7 +30,7 @@ export const Item = styled.li`
   }
 `
 
-export const ListContainer = styled.div`
+export const ListContainer = styled.section`
   width: 100%;
   overflow-y: scroll;
 `
@@ -69,6 +69,7 @@ export const Footer = styled.footer`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 55px;
+  place-items: center;
 `
 
 export const Btn = styled.button`
@@ -100,4 +101,26 @@ export const AmountContainer = styled.section`
   gap: 8px;
   border-top: 1px solid rgba(12, 12, 12, 0.1);
   box-shadow-top: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
+`
+
+export const Amount = styled.article`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+
+  & > p {
+    font-weight: 300;
+    margin-right: 8px;
+  }
+
+  & > span {
+    width: 120px;
+    padding: 8px;
+    font-weight: 700;
+    text-align: right;
+    border: 1px solid #b8b8ff;
+    border-radius: 4px;
+  }
 `

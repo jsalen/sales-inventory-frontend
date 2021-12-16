@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { removeFromCart, clearCart } from '../../features/cart/cartSlice'
-import { CartAmount } from '../../components/CartAmount/index'
 
 import { AiOutlineDelete } from 'react-icons/ai'
 import {
@@ -13,18 +12,13 @@ import {
   Btn,
   AmountContainer,
   ListContainer,
+  Amount,
 } from './styles'
 
 export const SalesPanel = ({ setOpenModal }) => {
   const products = useSelector((state) => state.cart.products)
   const total = useSelector((state) => state.cart.total)
   const dispatch = useDispatch()
-
-  const totalBolivares = () => {
-    const bs = total * 4.8
-
-    return bs.toFixed(2)
-  }
 
   const handleSubmit = () => {
     setOpenModal((prev) => !prev)
@@ -47,10 +41,10 @@ export const SalesPanel = ({ setOpenModal }) => {
         </List>
       </ListContainer>
       <AmountContainer>
-        <CartAmount
-          totalDollars={total.toFixed(2)}
-          totalBolivares={totalBolivares()}
-        />
+        <Amount>
+          <p>Total:</p>
+          <span>$ {total.toFixed(2)}</span>
+        </Amount>
       </AmountContainer>
       <Footer>
         <Btn primary onClick={handleSubmit}>
