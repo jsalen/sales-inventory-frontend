@@ -15,7 +15,7 @@ export const FormContainer = styled.section`
   box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
 
   & > form {
-    width: 60%;
+    width: 30%;
     margin: 0 auto;
   }
 `

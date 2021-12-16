@@ -120,7 +120,7 @@ export const Amount = styled.article`
     padding: 8px;
     font-weight: 700;
     text-align: right;
-    border: 1px solid #b8b8ff;
+    border: 1px solid #cecece;
     border-radius: 4px;
   }
 `
