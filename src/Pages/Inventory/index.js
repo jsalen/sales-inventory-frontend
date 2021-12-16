@@ -26,7 +26,6 @@ export const Inventory = () => {
       </InventoryContainer>
       <Footer>
         <Btn primary>Crear</Btn>
-        <Btn>Regresar</Btn>
       </Footer>
     </Container>
   )
