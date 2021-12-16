@@ -10,13 +10,7 @@ import {
   Select,
 } from './styles'
 
-export const FilterBoard = ({
-  title,
-  placeHolder,
-  categories,
-  query,
-  setQuery,
-}) => {
+export const FilterBoard = ({ title, placeHolder, query, setQuery }) => {
   return (
     <Container>
       <Header>
