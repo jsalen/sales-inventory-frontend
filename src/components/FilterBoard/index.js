@@ -36,7 +36,7 @@ export const FilterBoard = ({
             </Select>
           </div>
         )}
-        <Button>Ver todos</Button>
+        <Button onClick={() => setQuery('')}>Ver todos</Button>
       </Header>
       <Alphabet>
         <a href='#'>A</a>
