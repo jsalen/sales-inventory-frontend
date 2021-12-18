@@ -45,7 +45,7 @@ export const SalesModal = ({ setOpenModal }) => {
             name='amount'
             pattern='[0-9]+'
             min='0'
-            placeholder={total}
+            placeholder={total.toFixed(2)}
             onChange={handleChange}
           />
         </Section>
@@ -53,7 +53,7 @@ export const SalesModal = ({ setOpenModal }) => {
         <TotalBox>
           <article>
             <p>Total a Pagar:</p>
-            <span>$ {total}</span>
+            <span>$ {total.toFixed(2)}</span>
           </article>
           <article>
             <p>Total Pagado:</p>
