@@ -152,9 +152,14 @@ export const clientsSlice = createSlice({
     addClient: (state, action) => {
       state.clients.push(action.payload)
     },
+    removeClient: (state, action) => {
+      state.clients = state.clients.filter(
+        (client) => client.id !== action.payload
+      )
+    },
   },
 })
 
-export const { addClient } = clientsSlice.actions
+export const { addClient, removeClient } = clientsSlice.actions
 
 export default clientsSlice.reducer

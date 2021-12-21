@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
+  position: relative;
   width: 100%;
   max-width: 1280px;
   height: calc(100vh - 45px);

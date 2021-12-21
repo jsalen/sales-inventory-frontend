@@ -1,4 +1,6 @@
+import { Button } from '../../components/Button'
 import { ClientCard } from '../../components/ClientCard'
+
 import { Container } from './styles'
 
 export const ClientsTable = ({ clients }) => {
