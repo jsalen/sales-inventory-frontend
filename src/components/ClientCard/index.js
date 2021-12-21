@@ -9,14 +9,20 @@ import {
 } from 'react-icons/md'
 
 import { Button, Card, Header, MenuIcon, MenuList, Name } from './styles'
+import { ClientDetails } from '../ClientDetails'
 
 export const ClientCard = ({ client }) => {
-  const { id, name, last_name } = client
+  const { id, name, last_name, notes } = client
   const [open, setOpen] = useState(false)
-  const [toggleModal, setToggleModal] = useState(false)
+  const [deleteModal, setDeleteModal] = useState(false)
+  const [detailsModal, setDetailsModal] = useState(false)
 
-  const handleModal = () => {
-    setToggleModal((prev) => !prev)
+  const handleDeleteModal = () => {
+    setDeleteModal((prev) => !prev)
+  }
+
+  const handleDetailsModal = () => {
+    setDetailsModal((prev) => !prev)
   }
 
   return (
@@ -25,7 +31,9 @@ export const ClientCard = ({ client }) => {
         <Header>
           <div>
             <Name>{`${last_name}, ${name}`}</Name>
-            <Button>Ver detalles</Button>
+            <Button onClick={() => setDetailsModal((prev) => !prev)}>
+              Ver detalles
+            </Button>
           </div>
           <MenuIcon onClick={() => setOpen((prev) => !prev)}>
             <div />
@@ -36,7 +44,7 @@ export const ClientCard = ({ client }) => {
                 <li>
                   <MdOutlineHistory /> Historial
                 </li>
-                <li onClick={() => handleModal(id)}>
+                <li onClick={() => handleDeleteModal(id)}>
                   <MdOutlineDelete /> Borrar
                 </li>
                 <li>
@@ -53,8 +61,15 @@ export const ClientCard = ({ client }) => {
         </footer>
       </Card>
 
-      {toggleModal && (
-        <ClientModal id={id} name={name} handleModal={handleModal} />
+      {deleteModal && (
+        <ClientModal id={id} name={name} handleModal={handleDeleteModal} />
+      )}
+
+      {detailsModal && (
+        <ClientDetails
+          client={client}
+          handleDetailsModal={handleDetailsModal}
+        />
       )}
     </>
   )

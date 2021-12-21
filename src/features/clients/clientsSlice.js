@@ -8,7 +8,7 @@ const initialState = {
       last_name: 'Camellini',
       email: 'scamellini0@merriam-webster.com',
       phone: '(190) 2533430',
-      notes: [''],
+      notes: [],
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ const initialState = {
       last_name: 'De Filippo',
       email: null,
       phone: '(550) 4591061',
-      notes: [''],
+      notes: [],
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const initialState = {
       last_name: 'Drohun',
       email: null,
       phone: '(201) 6832865',
-      notes: [''],
+      notes: [],
     },
     {
       id: 4,
@@ -32,7 +32,7 @@ const initialState = {
       last_name: 'Drexel',
       email: 'hdrexel3@yolasite.com',
       phone: '(845) 8690008',
-      notes: [''],
+      notes: [],
     },
     {
       id: 5,
@@ -40,7 +40,7 @@ const initialState = {
       last_name: 'Piele',
       email: 'spiele4@csmonitor.com',
       phone: '(241) 7913867',
-      notes: [''],
+      notes: [],
     },
     {
       id: 6,
@@ -48,7 +48,7 @@ const initialState = {
       last_name: 'Feehely',
       email: null,
       phone: '(100) 6567118',
-      notes: [''],
+      notes: [],
     },
     {
       id: 7,
@@ -56,7 +56,7 @@ const initialState = {
       last_name: 'Demetr',
       email: 'bdemetr6@godaddy.com',
       phone: '(723) 8766551',
-      notes: [''],
+      notes: [],
     },
     {
       id: 8,
@@ -64,7 +64,7 @@ const initialState = {
       last_name: 'Errichelli',
       email: null,
       phone: '(510) 8243583',
-      notes: [''],
+      notes: [],
     },
     {
       id: 9,
@@ -72,7 +72,7 @@ const initialState = {
       last_name: 'Edrich',
       email: 'cedrich8@youtube.com',
       phone: '(130) 5866689',
-      notes: [''],
+      notes: [],
     },
     {
       id: 10,
@@ -80,7 +80,7 @@ const initialState = {
       last_name: 'Coie',
       email: null,
       phone: '(415) 8257586',
-      notes: [''],
+      notes: [],
     },
     {
       id: 11,
@@ -88,7 +88,7 @@ const initialState = {
       last_name: 'Virgin',
       email: 'cvirgina@imgur.com',
       phone: '(625) 9599286',
-      notes: [''],
+      notes: [],
     },
     {
       id: 12,
@@ -96,7 +96,7 @@ const initialState = {
       last_name: 'Firmager',
       email: 'dfirmagerb@oakley.com',
       phone: '(182) 6715382',
-      notes: [''],
+      notes: [],
     },
     {
       id: 13,
@@ -104,7 +104,7 @@ const initialState = {
       last_name: 'Kurton',
       email: 'ykurtonc@seattletimes.com',
       phone: '(422) 8564644',
-      notes: [''],
+      notes: [],
     },
     {
       id: 14,
@@ -112,7 +112,7 @@ const initialState = {
       last_name: 'Dumphry',
       email: 'jdumphryd@hostgator.com',
       phone: '(360) 8720081',
-      notes: [''],
+      notes: [],
     },
     {
       id: 15,
@@ -120,7 +120,7 @@ const initialState = {
       last_name: 'Tue',
       email: 'ztuee@harvard.edu',
       phone: '(126) 8258687',
-      notes: [''],
+      notes: [],
     },
     {
       id: 16,
@@ -128,7 +128,7 @@ const initialState = {
       last_name: 'Lanfranchi',
       email: 'olanfranchif@bbc.co.uk',
       phone: '(963) 8492563',
-      notes: [''],
+      notes: [],
     },
     {
       id: 17,
@@ -136,7 +136,7 @@ const initialState = {
       last_name: 'Jobling',
       email: null,
       phone: '(450) 2069064',
-      notes: [''],
+      notes: [],
     },
     {
       id: 18,
@@ -144,7 +144,7 @@ const initialState = {
       last_name: 'Densun',
       email: 'ddensunh@behance.net',
       phone: '(722) 6439435',
-      notes: [''],
+      notes: [],
     },
     {
       id: 19,
@@ -152,7 +152,7 @@ const initialState = {
       last_name: 'Edmonston',
       email: 'gedmonstoni@weebly.com',
       phone: '(329) 1075027',
-      notes: [''],
+      notes: [],
     },
     {
       id: 20,
@@ -160,7 +160,7 @@ const initialState = {
       last_name: 'Wayland',
       email: null,
       phone: '(349) 8908596',
-      notes: [''],
+      notes: [],
     },
   ],
 }
