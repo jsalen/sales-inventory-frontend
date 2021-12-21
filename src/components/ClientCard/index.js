@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { removeClient } from '../../features/clients/clientsSlice'
-import { Modal } from '../Modal'
+import { ClientModal } from '../ClientModal'
 
 import {
   MdOutlineCreate,
@@ -10,19 +8,9 @@ import {
   MdOutlineEdit,
 } from 'react-icons/md'
 
-import {
-  Button,
-  Card,
-  Header,
-  MenuIcon,
-  MenuList,
-  Name,
-  ModalContainer,
-  ModalButton,
-} from './styles'
+import { Button, Card, Header, MenuIcon, MenuList, Name } from './styles'
 
 export const ClientCard = ({ client }) => {
-  const dispatch = useDispatch()
   const { id, name, last_name } = client
   const [open, setOpen] = useState(false)
   const [toggleModal, setToggleModal] = useState(false)
@@ -31,59 +19,43 @@ export const ClientCard = ({ client }) => {
     setToggleModal((prev) => !prev)
   }
 
-  const handleDelete = (id) => {
-    dispatch(removeClient(id))
-    setToggleModal(false)
-  }
-
   return (
-    <Card>
-      <Header>
-        <div>
-          <Name>{`${last_name}, ${name}`}</Name>
-          <Button>Ver detalles</Button>
-        </div>
-        <MenuIcon onClick={() => setOpen((prev) => !prev)}>
-          <div />
-          <div />
-          <div />
-          {open && (
-            <MenuList>
-              <li>
-                <MdOutlineHistory /> Historial
-              </li>
-              <li onClick={() => handleModal(id)}>
-                <MdOutlineDelete /> Borrar
-              </li>
-              <li>
-                <MdOutlineEdit /> Editar
-              </li>
-            </MenuList>
-          )}
-        </MenuIcon>
-      </Header>
-      <footer>
-        <Button bold>
-          <MdOutlineCreate /> Agregar notas
-        </Button>
-      </footer>
+    <>
+      <Card>
+        <Header>
+          <div>
+            <Name>{`${last_name}, ${name}`}</Name>
+            <Button>Ver detalles</Button>
+          </div>
+          <MenuIcon onClick={() => setOpen((prev) => !prev)}>
+            <div />
+            <div />
+            <div />
+            {open && (
+              <MenuList>
+                <li>
+                  <MdOutlineHistory /> Historial
+                </li>
+                <li onClick={() => handleModal(id)}>
+                  <MdOutlineDelete /> Borrar
+                </li>
+                <li>
+                  <MdOutlineEdit /> Editar
+                </li>
+              </MenuList>
+            )}
+          </MenuIcon>
+        </Header>
+        <footer>
+          <Button bold>
+            <MdOutlineCreate /> Agregar notas
+          </Button>
+        </footer>
+      </Card>
 
       {toggleModal && (
-        <Modal>
-          <ModalContainer>
-            <h1>Confirmar</h1>
-            <p>¿Desea eliminar a {name}?</p>
-            <footer>
-              <ModalButton primary onClick={() => handleDelete(id)}>
-                Aceptar
-              </ModalButton>
-              <ModalButton onClick={() => setToggleModal(false)}>
-                Cancelar
-              </ModalButton>
-            </footer>
-          </ModalContainer>
-        </Modal>
+        <ClientModal id={id} name={name} handleModal={handleModal} />
       )}
-    </Card>
+    </>
   )
 }
