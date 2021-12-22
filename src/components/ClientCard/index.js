@@ -1,20 +1,19 @@
 import { useState } from 'react'
 
 import {
-  MdOutlineCreate,
   MdOutlineHistory,
   MdOutlineDelete,
   MdOutlineEdit,
 } from 'react-icons/md'
 
-import { Button, Card, Header, MenuIcon, MenuList, Name } from './styles'
+import { Card, Footer, Header, MenuIcon, MenuList, Name } from './styles'
 
 export const ClientCard = ({
   client,
   handleDeleteModal,
   handleDetailsModal,
 }) => {
-  const { id, name, last_name } = client
+  const { id, name, last_name, notes } = client
   const [open, setOpen] = useState(false)
 
   return (
@@ -22,7 +21,6 @@ export const ClientCard = ({
       <Header>
         <div>
           <Name>{`${last_name}, ${name}`}</Name>
-          <Button onClick={handleDetailsModal}>Ver detalles</Button>
         </div>
         <MenuIcon onClick={() => setOpen((prev) => !prev)}>
           <div />
@@ -30,8 +28,8 @@ export const ClientCard = ({
           <div />
           {open && (
             <MenuList>
-              <li>
-                <MdOutlineHistory /> Historial
+              <li onClick={handleDetailsModal}>
+                <MdOutlineHistory /> Detalles
               </li>
               <li onClick={() => handleDeleteModal(id)}>
                 <MdOutlineDelete /> Borrar
@@ -43,11 +41,10 @@ export const ClientCard = ({
           )}
         </MenuIcon>
       </Header>
-      <footer>
-        <Button bold>
-          <MdOutlineCreate /> Agregar notas
-        </Button>
-      </footer>
+      <Footer>
+        <h4>Notas:</h4>
+        <p>{notes.length > 0 ? notes : 'Sin notas 👍'}</p>
+      </Footer>
     </Card>
   )
 }

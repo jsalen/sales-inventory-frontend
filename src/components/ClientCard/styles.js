@@ -5,9 +5,9 @@ export const Card = styled.article`
   width: 100%;
   height: 140px;
   padding: 16px 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 25px 1fr;
+  grid-gap: 8px;
   background: #9381ff;
   border-radius: 4px;
   color: #f8f7ff;
@@ -32,24 +32,6 @@ export const Name = styled.p`
   margin-bottom: 6px;
   font-size: 17px;
   font-weight: 700;
-`
-
-export const Button = styled.button`
-  padding-bottom: 4px;
-  display: flex;
-  align-items: center;
-  color: #2e265e;
-  font-weight: ${(props) => (props.bold ? '700' : 400)};
-  border: 1px solid transparent;
-  cursor: pointer;
-
-  & > svg {
-    margin-right: 4px;
-  }
-
-  &:hover {
-    border-bottom: 1px solid #2e265e;
-  }
 `
 
 export const MenuIcon = styled.div`
@@ -99,5 +81,21 @@ export const MenuList = styled.ul`
       color: #f8f7ff;
       background-color: #b8b8ff;
     }
+  }
+`
+
+export const Footer = styled.footer`
+  width: 100%;
+  color: #2e265e;
+  font-size: 14px;
+  font-weight: 700;
+
+  & > p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 300;
+    font-style: italic;
   }
 `
