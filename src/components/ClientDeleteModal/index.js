@@ -4,7 +4,8 @@ import { removeClient } from '../../features/clients/clientsSlice'
 
 import { ModalButton, ModalContainer } from './styles'
 
-export const ClientModal = ({ id, name, handleModal }) => {
+export const ClientDeleteModal = ({ client, handleModal }) => {
+  const { id, name } = client
   const dispatch = useDispatch()
 
   const handleDelete = (id) => {
