@@ -1,5 +1,4 @@
-import { Button } from '../../components/Button'
-import { ClientCard } from '../../components/ClientCard'
+import { ClientCard } from '../ClientCard'
 
 import { Container } from './styles'
 

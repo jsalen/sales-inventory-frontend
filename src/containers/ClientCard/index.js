@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { ClientModal } from '../ClientModal'
+import { ClientModal } from '../../components/ClientModal'
+import { ClientDetails } from '../../components/ClientDetails'
 
 import {
   MdOutlineCreate,
@@ -9,7 +10,6 @@ import {
 } from 'react-icons/md'
 
 import { Button, Card, Header, MenuIcon, MenuList, Name } from './styles'
-import { ClientDetails } from '../ClientDetails'
 
 export const ClientCard = ({ client }) => {
   const { id, name, last_name, notes } = client
