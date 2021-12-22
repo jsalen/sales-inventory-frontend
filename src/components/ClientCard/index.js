@@ -12,6 +12,7 @@ export const ClientCard = ({
   client,
   handleDeleteModal,
   handleDetailsModal,
+  handleEditModal,
 }) => {
   const { id, name, last_name, notes } = client
   const [open, setOpen] = useState(false)
@@ -34,7 +35,7 @@ export const ClientCard = ({
               <li onClick={() => handleDeleteModal(id)}>
                 <MdOutlineDelete /> Borrar
               </li>
-              <li>
+              <li onClick={handleEditModal}>
                 <MdOutlineEdit /> Editar
               </li>
             </MenuList>
