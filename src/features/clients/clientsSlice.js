@@ -177,9 +177,20 @@ export const clientsSlice = createSlice({
         (client) => client.id !== action.payload
       )
     },
+    updateClient: (state, action) => {
+      const { id, client, index: clientIndex } = action.payload
+      state.clients.map((item, index) => {
+        if (index !== clientIndex) {
+          return item
+        }
+
+        return (state.clients[clientIndex] = { id, ...client })
+      })
+      // state.clients.map((c) => (c.id === id ? { ...c, ...client } : client))
+    },
   },
 })
 
-export const { addClient, removeClient } = clientsSlice.actions
+export const { addClient, removeClient, updateClient } = clientsSlice.actions
 
 export default clientsSlice.reducer

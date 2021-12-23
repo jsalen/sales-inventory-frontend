@@ -4,7 +4,7 @@ import { ClientDeleteModal } from '../../components/ClientDeleteModal'
 import { ClientDetails } from '../../components/ClientDetails'
 import { ClientEditModal } from '../../components/ClientEditModal'
 
-export const ClientContainer = ({ client }) => {
+export const ClientContainer = ({ client, index }) => {
   const [deleteModal, setDeleteModal] = useState(false)
   const [detailsModal, setDetailsModal] = useState(false)
   const [editModal, setEditModal] = useState(false)
@@ -42,7 +42,11 @@ export const ClientContainer = ({ client }) => {
       )}
 
       {editModal && (
-        <ClientEditModal client={client} handleEditModal={handleEditModal} />
+        <ClientEditModal
+          client={client}
+          index={index}
+          handleEditModal={handleEditModal}
+        />
       )}
     </>
   )

@@ -11,9 +11,7 @@ function useFilterData(data) {
         item.last_name.toLowerCase().includes(query.toLowerCase())
     )
 
-    if (filteredData.length !== result.length) {
-      setFilteredData(result)
-    }
+    setFilteredData(result)
   }, [data, query])
 
   return { query, setQuery, filteredData }

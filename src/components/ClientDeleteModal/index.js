@@ -10,7 +10,7 @@ export const ClientDeleteModal = ({ client, handleModal }) => {
 
   const handleDelete = (id) => {
     dispatch(removeClient(id))
-    setToggleModal(false)
+    handleModal()
   }
 
   return (

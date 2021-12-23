@@ -4,7 +4,7 @@ export const Container = styled.article`
   width: 340px;
   padding: 16px;
   display: grid;
-  grid-template-rows: 38px 1fr 45px;
+  grid-template-rows: 38px 1fr;
   grid-gap: 16px;
   background: #f8f7ff;
   border-radius: 4px;
