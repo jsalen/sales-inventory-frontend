@@ -170,7 +170,9 @@ export const clientsSlice = createSlice({
   initialState,
   reducers: {
     addClient: (state, action) => {
-      state.clients.push(action.payload)
+      const { client } = action.payload
+      const id = state.clients.length + 1
+      state.clients.push({ id, ...client })
     },
     removeClient: (state, action) => {
       state.clients = state.clients.filter(
