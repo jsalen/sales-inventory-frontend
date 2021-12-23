@@ -1,19 +1,25 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 
+import { MdOutlineAdd } from 'react-icons/md'
+
 import {
+  AddClientBox,
   Btn,
+  ClientSelect,
   Container,
   Content,
   Footer,
   Section,
   Select,
+  Tooltip,
   TotalBox,
 } from './styles'
 
 export const SalesModal = ({ setOpenModal }) => {
   const [totalPaid, setTotalPaid] = useState(0)
   const total = useSelector((state) => state.cart.total)
+  const clients = useSelector((state) => state.clients.clients)
 
   const handleClick = () => {
     setOpenModal((prev) => !prev)
@@ -28,6 +34,23 @@ export const SalesModal = ({ setOpenModal }) => {
   return (
     <Container>
       <header>Pagar</header>
+
+      <ClientSelect>
+        <Select id='client'>
+          <option defaultValue hidden>
+            Seleccionar Cliente
+          </option>
+          {clients.map((client) => (
+            <option key={client.id} value={client.id}>
+              {client.last_name}, {client.name}
+            </option>
+          ))}
+        </Select>
+        <AddClientBox>
+          <Tooltip>Crear Cliente</Tooltip>
+          <MdOutlineAdd size={24} />
+        </AddClientBox>
+      </ClientSelect>
 
       <Select id='method'>
         <option defaultValue hidden>

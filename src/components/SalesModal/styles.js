@@ -36,6 +36,45 @@ export const Select = styled.select`
   }
 `
 
+export const ClientSelect = styled.section`
+  width: 212px;
+  display: grid;
+  grid-template-columns: 1fr 32px;
+  align-items: center;
+  grid-gap: 6px;
+
+  & svg {
+    color: #b8b8ff;
+    cursor: pointer;
+    border: 1px solid #b8b8ff;
+    border-radius: 50%;
+  }
+`
+
+export const AddClientBox = styled.article`
+  position: relative;
+  display: grid;
+  place-items: center;
+`
+
+export const Tooltip = styled.span`
+  position: absolute;
+  width: 122px;
+  bottom: 100%;
+  z-index: 3;
+  visibility: hidden;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #f8f7ff;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 4px;
+
+  ${AddClientBox}:hover & {
+    visibility: visible;
+  }
+`
+
 export const Content = styled.main`
   width: 80%;
   height: auto;
