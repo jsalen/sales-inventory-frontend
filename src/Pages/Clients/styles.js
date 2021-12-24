@@ -38,11 +38,10 @@ export const Footer = styled.footer`
     place-items: center;
     color: #f8f7ff;
     background: #9381ff;
-    border: 1px solid #f8f7ff;
     border-radius: 50%;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s ease;
 
     &:hover {
       color: #9381ff;
