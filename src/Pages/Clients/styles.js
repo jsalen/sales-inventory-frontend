@@ -11,3 +11,48 @@ export const Container = styled.section`
   grid-template-rows: 96px 1fr;
   grid-gap: 12px;
 `
+
+export const Tooltip = styled.span`
+  position: absolute;
+  width: 122px;
+  top: calc(50% - 16.5px);
+  right: 105%;
+  z-index: 3;
+  visibility: hidden;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #f8f7ff;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 4px;
+`
+
+export const Footer = styled.footer`
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+
+  & button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    color: #f8f7ff;
+    background: #9381ff;
+    border: 1px solid #f8f7ff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      color: #9381ff;
+      border: 1px solid #9381ff;
+      background: #f8f7ff;
+      transform: scale(1.1);
+    }
+
+    &:hover ${Tooltip} {
+      visibility: visible;
+    }
+  }
+`

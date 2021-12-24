@@ -3,7 +3,9 @@ import { FilterBoard } from '../../components/FilterBoard'
 import { ClientsTable } from '../../containers/ClientsTable'
 import useFilterClients from '../../hooks/useFilterClients'
 
-import { Container } from './styles'
+import { MdOutlineAdd } from 'react-icons/md'
+
+import { Container, Footer, Tooltip } from './styles'
 
 export const Clients = () => {
   const clients = useSelector((state) => state.clients.clients)
@@ -22,6 +24,13 @@ export const Clients = () => {
         setQuery={setQuery}
       />
       <ClientsTable clients={filteredClients} />
+
+      <Footer>
+        <button>
+          <Tooltip>Crear Cliente</Tooltip>
+          <MdOutlineAdd size='48' />
+        </button>
+      </Footer>
     </Container>
   )
 }
