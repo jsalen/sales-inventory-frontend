@@ -32,11 +32,11 @@ export const ClientCard = ({
               <li onClick={handleDetailsModal}>
                 <MdOutlineHistory /> Detalles
               </li>
-              <li onClick={() => handleDeleteModal(id)}>
-                <MdOutlineDelete /> Borrar
-              </li>
               <li onClick={handleEditModal}>
                 <MdOutlineEdit /> Editar
+              </li>
+              <li onClick={() => handleDeleteModal(id)}>
+                <MdOutlineDelete /> Borrar
               </li>
             </MenuList>
           )}
