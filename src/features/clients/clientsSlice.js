@@ -172,6 +172,7 @@ export const clientsSlice = createSlice({
     addClient: (state, action) => {
       const { client } = action.payload
       const id = state.clients.length + 1
+
       state.clients.push({ id, ...client })
     },
     removeClient: (state, action) => {
@@ -181,14 +182,8 @@ export const clientsSlice = createSlice({
     },
     updateClient: (state, action) => {
       const { id, client, index: clientIndex } = action.payload
-      state.clients.map((item, index) => {
-        if (index !== clientIndex) {
-          return item
-        }
 
-        return (state.clients[clientIndex] = { id, ...client })
-      })
-      // state.clients.map((c) => (c.id === id ? { ...c, ...client } : client))
+      state.clients[clientIndex] = { id, ...client }
     },
   },
 })
