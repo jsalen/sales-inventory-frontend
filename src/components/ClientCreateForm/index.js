@@ -88,7 +88,9 @@ export const ClientCreateForm = ({ handleModal }) => {
           ></textarea>
         </FormGroup>
         <Footer>
-          <Button type='submit'>Guardar</Button>
+          <Button type='submit' primary>
+            Guardar
+          </Button>
           <Button onClick={handleModal}>Cancelar</Button>
         </Footer>
       </Form>

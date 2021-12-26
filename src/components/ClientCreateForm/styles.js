@@ -71,7 +71,7 @@ export const Footer = styled.footer`
 export const Button = styled.button`
   width: 130px;
   height: 35px;
-  color: ${(props) => (props.primary ? '#2e265e' : '#f8f7ff')};
+  color: ${(props) => (props.primary ? '#9381ff' : '#f8f7ff')};
   background: ${(props) => (props.primary ? '#f8f7ff' : '#9381ff')};
   border: ${(props) => (props.primary ? '1px solid #9381ff' : '0')};
   cursor: pointer;
