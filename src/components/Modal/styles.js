@@ -13,5 +13,6 @@ export const Container = styled.section`
   align-items: center;
   color: #2e265e;
   background-color: rgba(120, 120, 120, 0.4);
+  z-index: 3;
   ${fadeIn({ time: '0.25s' })}
 `
