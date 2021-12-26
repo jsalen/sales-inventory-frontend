@@ -10,14 +10,14 @@ export const Container = styled.section`
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr;
-  grid-template-rows: 120px auto 1fr;
+  grid-template-rows: 120px 1fr 45px;
   grid-gap: 16px;
 `
 
 export const InventoryContainer = styled.section`
   width: 100%;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-  overflow-y: scroll;
+  overflow: hidden scroll;
 `
 
 export const Footer = styled.footer`
