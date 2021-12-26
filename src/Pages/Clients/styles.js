@@ -4,9 +4,10 @@ export const Container = styled.section`
   position: relative;
   width: 100%;
   max-width: 1280px;
-  height: calc(100vh - 45px);
+  height: auto;
   padding: 24px;
   margin: 0 auto;
+  margin-bottom: 12px;
   display: grid;
   grid-template-rows: 96px 1fr;
   grid-gap: 12px;
