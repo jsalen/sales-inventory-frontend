@@ -35,7 +35,7 @@ export const ClientCard = ({
               <li onClick={handleEditModal}>
                 <MdOutlineEdit /> Editar
               </li>
-              <li onClick={() => handleDeleteModal(id)}>
+              <li onClick={handleDeleteModal}>
                 <MdOutlineDelete /> Borrar
               </li>
             </MenuList>
