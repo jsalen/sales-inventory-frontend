@@ -369,6 +369,14 @@ export const productsSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
+    addProduct: (state, action) => {
+      const { id, value } = action.payload
+      const productIndex = state.products.findIndex(
+        (product) => product.id === id
+      )
+
+      state.products[productIndex].stock += value
+    },
     deleteProduct: (state, action) => {
       state.products = state.products.filter(
         (product) => product.id !== action.payload
@@ -386,6 +394,7 @@ export const productsSlice = createSlice({
   },
 })
 
-export const { updateProduct, deleteProduct } = productsSlice.actions
+export const { addProduct, deleteProduct, updateProduct } =
+  productsSlice.actions
 
 export default productsSlice.reducer
