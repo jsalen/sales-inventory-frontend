@@ -13,14 +13,17 @@ import {
   TableRow,
   Tooltip,
 } from './styles'
+import { ProductDeleteModal } from '../../components/ProductDeleteModal'
 
 export const InventoryTable = ({ products }) => {
   const [deleteModal, setDeleteModal] = useState(false)
   const [editModal, setEditModal] = useState(false)
-  const [editProduct, setEditProduct] = useState({})
   const [addModal, setAddModal] = useState(false)
+  const [editProduct, setEditProduct] = useState({})
+  const [deleteProduct, setDeleteProduct] = useState(0)
 
-  const handleDeleteModal = () => {
+  const handleDeleteModal = (id) => {
+    setDeleteProduct(id)
     setDeleteModal((prev) => !prev)
   }
 
@@ -58,7 +61,10 @@ export const InventoryTable = ({ products }) => {
                   <Tooltip>Editar</Tooltip>
                   <MdOutlineEdit size='16' />
                 </Button>
-                <Button variant='warning' onClick={handleDeleteModal}>
+                <Button
+                  variant='warning'
+                  onClick={() => handleDeleteModal(product.id)}
+                >
                   <Tooltip>Eliminar</Tooltip>
                   <MdOutlineDelete size='16' />
                 </Button>
@@ -78,7 +84,12 @@ export const InventoryTable = ({ products }) => {
         </Modal>
       )}
 
-      {deleteModal && <Modal>Delete product</Modal>}
+      {deleteModal && (
+        <ProductDeleteModal
+          product={deleteProduct}
+          handleModal={handleDeleteModal}
+        />
+      )}
 
       {addModal && <Modal>Add product</Modal>}
     </>
