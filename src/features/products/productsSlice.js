@@ -377,6 +377,12 @@ export const productsSlice = createSlice({
 
       state.products[productIndex].stock += value
     },
+    createProduct: (state, action) => {
+      const { product } = action.payload
+      const id = state.products.length + 1
+
+      state.products.push({ id, ...product })
+    },
     deleteProduct: (state, action) => {
       state.products = state.products.filter(
         (product) => product.id !== action.payload
@@ -384,7 +390,6 @@ export const productsSlice = createSlice({
     },
     updateProduct: (state, action) => {
       const { id, product } = action.payload
-
       const productIndex = state.products.findIndex(
         (product) => product.id === id
       )
@@ -394,7 +399,7 @@ export const productsSlice = createSlice({
   },
 })
 
-export const { addProduct, deleteProduct, updateProduct } =
+export const { addProduct, createProduct, deleteProduct, updateProduct } =
   productsSlice.actions
 
 export default productsSlice.reducer
