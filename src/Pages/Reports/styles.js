@@ -39,6 +39,13 @@ export const DetailsContainer = styled.section`
   display: grid;
   grid-template-rows: 90px 1fr 55px;
   background: #f8f7ff;
+
+  & > h1 {
+    grid-area: 1/1/-1/-1;
+    font-size: 32px;
+    display: grid;
+    place-items: center;
+  }
 `
 
 export const Footer = styled.footer`

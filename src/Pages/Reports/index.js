@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 
 import { DateFilter } from '../../components/DateFilter'
 import { OrderCard } from '../../components/OrderCard'
+import { OrdersEmpty } from '../../components/OrdersEmpty'
 import { OrderDetail } from '../../containers/OrderDetail'
 
 import {
@@ -50,7 +51,7 @@ export const Reports = () => {
             />
           ))
         ) : (
-          <h2>No hay ordenes</h2>
+          <OrdersEmpty />
         )}
       </OrderContainer>
 
