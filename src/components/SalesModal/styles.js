@@ -88,7 +88,7 @@ export const Section = styled.section`
   justify-content: space-between;
 
   & > input {
-    width: 120px;
+    width: 110px;
     height: 24px;
     border: 0;
     border-bottom: 1px dashed #cecece;
@@ -110,6 +110,10 @@ export const Section = styled.section`
     &:focus {
       border-bottom: 1px solid #b8b8ff;
       outline: 0;
+    }
+
+    &:invalid {
+      border-bottom: 1px solid #f23546;
     }
   }
 `

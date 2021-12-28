@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { createOrder } from '../../features/orders/ordersSlice'
+import { clearCart } from '../../features/cart/cartSlice'
 import { ClientCreateForm } from '../ClientCreateForm'
 import { Modal } from '../Modal'
 
@@ -18,15 +20,16 @@ import {
   TotalBox,
 } from './styles'
 
-export const SalesModal = ({ setOpenModal }) => {
+export const SalesModal = ({ handleModal }) => {
+  const [client, setClient] = useState(null)
+  const [payment, setPayment] = useState(null)
   const [totalPaid, setTotalPaid] = useState(0)
   const [createClientModal, setCreateClientModal] = useState(false)
-  const total = useSelector((state) => state.cart.total)
-  const clients = useSelector((state) => state.clients.clients)
 
-  const handleClick = () => {
-    setOpenModal((prev) => !prev)
-  }
+  const { products, total } = useSelector((state) => state.cart)
+  const { clients } = useSelector((state) => state.clients)
+
+  const dispatch = useDispatch()
 
   const handleChange = (e) => {
     setTotalPaid(e.target.value)
@@ -38,13 +41,28 @@ export const SalesModal = ({ setOpenModal }) => {
 
   const getChange = () => (totalPaid - total).toFixed(2)
 
+  const handleSubmit = () => {
+    const order = {
+      products,
+      total: Number(total.toFixed(2)),
+      change: Number(getChange()),
+      client,
+      payment,
+    }
+
+    dispatch(createOrder({ order }))
+    dispatch(clearCart())
+
+    handleModal()
+  }
+
   return (
     <>
       <Container>
         <header>Pagar</header>
 
         <ClientSelect>
-          <Select id='client'>
+          <Select id='client' onChange={(e) => setClient(e.target.value)}>
             <option defaultValue hidden>
               Seleccionar Cliente
             </option>
@@ -54,27 +72,29 @@ export const SalesModal = ({ setOpenModal }) => {
               </option>
             ))}
           </Select>
+
           <AddClientBox onClick={() => setCreateClientModal((prev) => !prev)}>
             <Tooltip>Crear Cliente</Tooltip>
             <MdOutlineAdd size={24} />
           </AddClientBox>
         </ClientSelect>
 
-        <Select id='method'>
+        <Select id='method' onChange={(e) => setPayment(e.target.value)}>
           <option defaultValue hidden>
-            Método de Pago
+            Método de Pago (*)
           </option>
-          <option value='efectivo'>Efectivo</option>
-          <option value='tarjeta-debito'>Tarjeta de Debito</option>
+          <option value='1'>Efectivo</option>
+          <option value='2'>Tarjeta de Debito</option>
         </Select>
 
         <Content>
           <Section>
-            <p>Monto Forma de pago:</p>
+            <p>Monto Forma de pago: (*)</p>
             <input
               type='number'
               name='amount'
               pattern='[0-9]+'
+              title='Solo se permiten números'
               min='0'
               placeholder={total.toFixed(2)}
               onChange={handleChange}
@@ -96,11 +116,16 @@ export const SalesModal = ({ setOpenModal }) => {
             </article>
           </TotalBox>
         </Content>
+
         <Footer>
-          <Btn primary onClick={handleClick} disabled={total > totalPaid}>
+          <Btn
+            primary
+            onClick={handleSubmit}
+            disabled={totalPaid < total || payment === null}
+          >
             Confirmar
           </Btn>
-          <Btn onClick={handleClick}>Cancelar</Btn>
+          <Btn onClick={handleModal}>Cancelar</Btn>
         </Footer>
       </Container>
 
