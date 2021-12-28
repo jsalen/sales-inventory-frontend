@@ -6,9 +6,7 @@ export const OrderDetailTable = ({ products }) => {
       <TableHead>
         <tr>
           <th>Producto</th>
-          <th>Precio und.</th>
-          <th>Cantidad</th>
-          <th>Precio total</th>
+          <th>Precio</th>
         </tr>
       </TableHead>
       <TableBody>
@@ -16,8 +14,6 @@ export const OrderDetailTable = ({ products }) => {
           <TableRow key={product.id}>
             <TableCell lg>{product.name}</TableCell>
             <TableCell center>${product.price}</TableCell>
-            <TableCell center>2</TableCell>
-            <TableCell center>$20</TableCell>
           </TableRow>
         ))}
       </TableBody>
