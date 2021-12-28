@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = []
+const initialState = {
+  orders: [],
+}
 
 export const ordersSlice = createSlice({
   name: 'orders',
@@ -8,9 +10,9 @@ export const ordersSlice = createSlice({
   reducers: {
     createOrder: (state, action) => {
       const { order } = action.payload
-      const id = state.length + 1
+      const id = state.orders.length + 1
 
-      state.push({ id, ...order })
+      state.orders.push({ id, ...order })
     },
   },
 })
