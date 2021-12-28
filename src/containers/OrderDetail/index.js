@@ -1,11 +1,12 @@
 import { OrderDetailTable } from '../../components/OrderDetailTable'
 import { Content, Date, Footer, Header, Info } from './styles'
 
-export const OrderDetail = () => {
+export const OrderDetail = ({ order }) => {
+  const { id, total, products, change, payment, client } = order
   return (
     <>
       <Header>
-        <h2>Orden #1</h2>
+        <h2>Orden #{id}</h2>
         <Info>
           <div>
             <p>
@@ -14,7 +15,7 @@ export const OrderDetail = () => {
           </div>
           <div>
             <p>
-              Cliente: <span>Sin Identificar</span>
+              Cliente: <span>{client || 'Sin identificar'}</span>
             </p>
           </div>
         </Info>
@@ -23,18 +24,20 @@ export const OrderDetail = () => {
           <p>11:53 AM</p>
         </Date>
       </Header>
+
       <Content>
-        <OrderDetailTable />
+        <OrderDetailTable products={products} />
       </Content>
+
       <Footer>
         <p>
-          Método de Pago: <span>Efectivo</span>
+          Método de Pago: <span>{payment}</span>
         </p>
         <p>
-          Vuelto: <span>$0.00</span>
+          Vuelto: <span>${change}</span>
         </p>
         <p>
-          Monto total: <span>$100</span>
+          Monto total: <span>${total}</span>
         </p>
       </Footer>
     </>

@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
+
 import { DateFilter } from '../../components/DateFilter'
 import { OrderCard } from '../../components/OrderCard'
 import { OrderDetail } from '../../containers/OrderDetail'
@@ -12,6 +14,8 @@ import {
 
 export const Reports = () => {
   const [startDate, setStartDate] = useState(new Date())
+  const [selectedOrder, setSelectedOrder] = useState({})
+  const { orders } = useSelector((state) => state.orders)
 
   const handleChange = (date) => {
     setStartDate(date)
@@ -19,6 +23,10 @@ export const Reports = () => {
 
   const handleDelete = () => {
     setStartDate(new Date())
+  }
+
+  const handleSelectedOrder = (order) => {
+    setSelectedOrder(order)
   }
 
   return (
@@ -31,11 +39,27 @@ export const Reports = () => {
           handleDelete={handleDelete}
         />
       </FilterContainer>
+
       <OrderContainer>
-        <OrderCard />
+        {orders.length > 0 ? (
+          orders.map((order) => (
+            <OrderCard
+              key={order.id}
+              order={order}
+              handleSelectedOrder={handleSelectedOrder}
+            />
+          ))
+        ) : (
+          <h2>No hay ordenes</h2>
+        )}
       </OrderContainer>
+
       <DetailsContainer>
-        <OrderDetail />
+        {Object.keys(selectedOrder).length > 0 ? (
+          <OrderDetail order={selectedOrder} />
+        ) : (
+          <h1>Seleccione una orden</h1>
+        )}
       </DetailsContainer>
     </Container>
   )

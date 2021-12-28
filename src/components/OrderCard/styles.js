@@ -49,6 +49,7 @@ export const Footer = styled.footer`
   font-weight: 300;
   color: #2e265e;
   align-self: center;
+  text-align: right;
 
   ${Card}:hover & {
     color: #9381ff;

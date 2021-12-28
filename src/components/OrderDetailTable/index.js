@@ -1,6 +1,6 @@
 import { Table, TableBody, TableCell, TableHead, TableRow } from './styles'
 
-export const OrderDetailTable = () => {
+export const OrderDetailTable = ({ products }) => {
   return (
     <Table>
       <TableHead>
@@ -12,10 +12,10 @@ export const OrderDetailTable = () => {
         </tr>
       </TableHead>
       <TableBody>
-        {[1, 2, 3].map((item) => (
-          <TableRow key={item}>
-            <TableCell lg>Producto</TableCell>
-            <TableCell center>$10</TableCell>
+        {products.map((product) => (
+          <TableRow key={product.id}>
+            <TableCell lg>{product.name}</TableCell>
+            <TableCell center>${product.price}</TableCell>
             <TableCell center>2</TableCell>
             <TableCell center>$20</TableCell>
           </TableRow>
