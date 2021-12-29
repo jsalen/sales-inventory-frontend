@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Figure = styled.figure`
   width: 100%;
+  max-width: 335px;
   margin: 0 auto;
 
   & > img {
@@ -12,6 +13,6 @@ export const Figure = styled.figure`
 
   & > figcaption {
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
   }
 `

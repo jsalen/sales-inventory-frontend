@@ -56,3 +56,24 @@ export const Footer = styled.footer`
     }
   }
 `
+
+export const Button = styled.button`
+  width: 146px;
+  padding: 8px 16px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  background: #9381ff;
+  color: #f8f7ff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #9381ff;
+    border: 1px solid #9381ff;
+    background: #f8f7ff;
+    transform: scale(1.1);
+  }
+`

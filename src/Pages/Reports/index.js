@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { useSelector } from 'react-redux'
 
 import { OrderCard } from '../../components/OrderCard'
-import { OrdersEmpty } from '../../components/OrdersEmpty'
+import { EmptyContainer } from '../../components/EmptyContainer'
 import { OrderDetail } from '../../containers/OrderDetail'
+import empty from '../../images/no-orders.png'
 
 import { Container, OrderContainer, DetailsContainer } from './styles'
 
@@ -27,7 +28,7 @@ export const Reports = () => {
             />
           ))
         ) : (
-          <OrdersEmpty />
+          <EmptyContainer image={empty} alt='Vacio' title='No hay ordenes' />
         )}
       </OrderContainer>
 
