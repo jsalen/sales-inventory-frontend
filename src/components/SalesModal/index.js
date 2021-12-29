@@ -67,7 +67,10 @@ export const SalesModal = ({ handleModal }) => {
               Seleccionar Cliente
             </option>
             {clients.map((client) => (
-              <option key={client.id} value={client.id}>
+              <option
+                key={client.id}
+                value={`${client.last_name}, ${client.name}`}
+              >
                 {client.last_name}, {client.name}
               </option>
             ))}

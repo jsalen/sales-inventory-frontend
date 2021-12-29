@@ -14,7 +14,7 @@ const initialState = {
       ],
       total: 10,
       change: 10,
-      client: null,
+      client: 'Joseph Salen',
       payment: 1,
     },
   ],
