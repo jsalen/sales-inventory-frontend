@@ -15,9 +15,8 @@ export const Container = styled.section`
 export const OrderContainer = styled.section`
   grid-area: 1/1/-1/2;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: grid;
+  place-items: center;
   padding: 12px;
   background: #edebf9;
   overflow-y: auto;
