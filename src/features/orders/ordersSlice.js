@@ -1,7 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  orders: [],
+  orders: [
+    {
+      id: 1,
+      date: new Date(),
+      products: [
+        {
+          id: 3,
+          name: 'Product 1',
+          price: 10,
+        },
+      ],
+      total: 10,
+      change: 10,
+      client: null,
+      payment: 1,
+    },
+  ],
 }
 
 export const ordersSlice = createSlice({
@@ -11,8 +27,9 @@ export const ordersSlice = createSlice({
     createOrder: (state, action) => {
       const { order } = action.payload
       const id = state.orders.length + 1
+      const date = new Date() // DEV: Dejar que la DB genere la fecha
 
-      state.orders.push({ id, ...order })
+      state.orders.push({ id, date, ...order })
     },
   },
 })

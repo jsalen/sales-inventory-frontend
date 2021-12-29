@@ -1,7 +1,11 @@
+import { formatDate } from '../../helpers'
+
 import { Card, Header, Footer } from './styles'
 
 export const OrderCard = ({ order, handleSelectedOrder }) => {
-  const { id } = order
+  const { id, date } = order
+  const [day, time] = formatDate(date)
+
   return (
     <Card onClick={() => handleSelectedOrder(order)}>
       <Header>
@@ -11,7 +15,7 @@ export const OrderCard = ({ order, handleSelectedOrder }) => {
         </p>
       </Header>
       <Footer>
-        <p>11:53 AM</p>
+        <p>{time}</p>
       </Footer>
     </Card>
   )

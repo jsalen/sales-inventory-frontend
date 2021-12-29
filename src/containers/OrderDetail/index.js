@@ -1,8 +1,11 @@
 import { OrderDetailTable } from '../../components/OrderDetailTable'
 import { Content, Date, Footer, Header, Info } from './styles'
+import { formatDate } from '../../helpers'
 
 export const OrderDetail = ({ order }) => {
-  const { id, total, products, change, payment, client } = order
+  const { id, total, products, change, payment, client, date } = order
+  const [day, time] = formatDate(date)
+
   return (
     <>
       <Header>
@@ -20,8 +23,8 @@ export const OrderDetail = ({ order }) => {
           </div>
         </Info>
         <Date>
-          <p>12/12/2021</p>
-          <p>11:53 AM</p>
+          <p>{day}</p>
+          <p>{time}</p>
         </Date>
       </Header>
 
