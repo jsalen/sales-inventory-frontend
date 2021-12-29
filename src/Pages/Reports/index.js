@@ -1,30 +1,15 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 
-import { DateFilter } from '../../components/DateFilter'
 import { OrderCard } from '../../components/OrderCard'
 import { OrdersEmpty } from '../../components/OrdersEmpty'
 import { OrderDetail } from '../../containers/OrderDetail'
 
-import {
-  Container,
-  FilterContainer,
-  OrderContainer,
-  DetailsContainer,
-} from './styles'
+import { Container, OrderContainer, DetailsContainer } from './styles'
 
 export const Reports = () => {
-  const [startDate, setStartDate] = useState(new Date())
   const [selectedOrder, setSelectedOrder] = useState({})
   const { orders } = useSelector((state) => state.orders)
-
-  const handleChange = (date) => {
-    setStartDate(date)
-  }
-
-  const handleDelete = () => {
-    setStartDate(new Date())
-  }
 
   const handleSelectedOrder = (order) => {
     setSelectedOrder(order)
@@ -32,15 +17,6 @@ export const Reports = () => {
 
   return (
     <Container>
-      <FilterContainer>
-        <h2>Filtrar por fecha:</h2>
-        <DateFilter
-          startDate={startDate}
-          handleChange={handleChange}
-          handleDelete={handleDelete}
-        />
-      </FilterContainer>
-
       <OrderContainer>
         {orders.length > 0 ? (
           orders.map((order) => (
