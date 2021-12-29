@@ -2,21 +2,21 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   orders: [
-    {
-      id: 1,
-      date: new Date(),
-      products: [
-        {
-          id: 3,
-          name: 'Product 1',
-          price: 10,
-        },
-      ],
-      total: 10,
-      change: 10,
-      client: 'Joseph Salen',
-      payment: 1,
-    },
+    // {
+    //   id: 1,
+    //   date: new Date(),
+    //   products: [
+    //     {
+    //       id: 3,
+    //       name: 'Product 1',
+    //       price: 10,
+    //     },
+    //   ],
+    //   total: 10,
+    //   change: 10,
+    //   client: 'Joseph Salen',
+    //   payment: 1,
+    // },
   ],
 }
 
