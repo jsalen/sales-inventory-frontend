@@ -59,7 +59,7 @@ export const AddClientBox = styled.article`
 
 export const Tooltip = styled.span`
   position: absolute;
-  width: 122px;
+  width: 133px;
   bottom: 100%;
   z-index: 3;
   visibility: hidden;
@@ -161,7 +161,7 @@ export const Btn = styled.button`
 
   &:hover {
     color: ${(props) => (props.primary ? '#F8F7FF' : '#F8F7FF')};
-    background: ${(props) => (props.primary ? '#9381FF' : '#f23546')};
+    background: ${(props) => (props.primary ? '#9381FF' : '#eb0f23')};
   }
 
   &:disabled {

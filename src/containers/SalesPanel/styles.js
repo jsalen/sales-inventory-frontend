@@ -87,7 +87,7 @@ export const Btn = styled.button`
 
   &:hover {
     color: ${(props) => (props.primary ? '#F8F7FF' : '#F8F7FF')};
-    background: ${(props) => (props.primary ? '#9381FF' : '#f23546')};
+    background: ${(props) => (props.primary ? '#9381FF' : '#eb0f23')};
   }
 `
 
