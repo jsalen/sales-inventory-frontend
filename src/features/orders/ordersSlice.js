@@ -13,6 +13,7 @@ const initialState = {
     //     },
     //   ],
     //   total: 10,
+    //   totalPaid: 20,
     //   change: 10,
     //   client: 'Joseph Salen',
     //   payment: 1,
