@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { CloseCashierCard } from '../../components/CloseCashierCard'
+import { OpeningAmountModal } from '../../components/OpeningAmountModal'
 import { ResumeCashFlow } from '../../components/ResumeCashFlow'
 import { ResumeSales } from '../../components/ResumeSales'
 import { formatDate } from '../../helpers'
@@ -14,8 +16,12 @@ import {
 } from './styles'
 
 export const Close = () => {
+  const [openingAmount, setOpeningAmount] = useState(0)
+  const [openingModal, setOpeningModal] = useState(false)
   const date = new window.Date()
   const [day, time] = formatDate(date)
+
+  const handleOpeningModal = () => setOpeningModal((prev) => !prev)
 
   return (
     <Container>
@@ -32,8 +38,7 @@ export const Close = () => {
         <ResumeCashFlow
           cash={680}
           card={600}
-          total={1280}
-          opening={500}
+          opening={openingAmount}
           change={100}
         />
       </Content>
@@ -44,10 +49,17 @@ export const Close = () => {
           <CloseCashierCard title='Diferencia Total' amount='0' />
         </section>
         <Options>
-          <Button>Saldo Apertura</Button>
+          <Button onClick={handleOpeningModal}>Saldo Apertura</Button>
           <Button primary>Cerrar Caja</Button>
         </Options>
       </Footer>
+
+      {openingModal && (
+        <OpeningAmountModal
+          setOpeningAmount={setOpeningAmount}
+          handleModal={handleOpeningModal}
+        />
+      )}
     </Container>
   )
 }
