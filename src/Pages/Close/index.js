@@ -47,11 +47,6 @@ export const Close = () => {
         />
       </Content>
       <Footer>
-        <section>
-          <CloseCashierCard title='Efectivo Final' amount='680' />
-          <CloseCashierCard title='Diferencia Efectivo' amount='0' />
-          <CloseCashierCard title='Diferencia Total' amount='0' />
-        </section>
         <Options>
           <Button onClick={handleOpeningModal}>Saldo Apertura</Button>
           <Button primary>Cerrar Caja</Button>

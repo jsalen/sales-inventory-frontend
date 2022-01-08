@@ -7,7 +7,7 @@ export const Container = styled.main`
   max-width: 960px;
   margin: 12px auto;
   display: grid;
-  grid-template-rows: 110px 1fr 160px;
+  grid-template-rows: 110px 1fr 60px;
   background: #f8f7ff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 `
@@ -17,6 +17,7 @@ export const Date = styled.section`
   top: 12px;
   left: 12px;
   color: #2e265e;
+  font-size: 12px;
 `
 
 export const Header = styled.header`
@@ -32,7 +33,8 @@ export const Content = styled.section`
   width: 100%;
   padding: 18px;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px;
   overflow-y: scroll;
 `
 
@@ -40,13 +42,7 @@ export const Footer = styled.footer`
   width: 100%;
   padding: 12px;
   display: grid;
-  grid-template-rows: 66px 1fr;
-
-  & > section {
-    display: flex;
-    justify-content: space-around;
-    text-align: right;
-  }
+  grid-template-rows: 1fr;
 `
 
 export const Options = styled.main`
