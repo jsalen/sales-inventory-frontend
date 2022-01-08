@@ -15,9 +15,10 @@ export const Container = styled.section`
 export const OrderContainer = styled.section`
   grid-area: 1/1/-1/2;
   width: 100%;
-  display: grid;
-  place-items: center;
   padding: 12px;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 90px);
+  grid-gap: 12px;
   background: #edebf9;
   overflow-y: auto;
 `

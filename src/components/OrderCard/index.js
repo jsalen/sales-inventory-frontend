@@ -3,7 +3,7 @@ import { formatDate } from '../../helpers'
 import { Card, Header, Footer } from './styles'
 
 export const OrderCard = ({ order, handleSelectedOrder }) => {
-  const { id, date } = order
+  const { id, date, total_paid } = order
   const [day, time] = formatDate(date)
 
   return (
@@ -11,7 +11,7 @@ export const OrderCard = ({ order, handleSelectedOrder }) => {
       <Header>
         <h3>Orden #{id}</h3>
         <p>
-          Vendedor: <span>Joseph Salen</span>
+          Venta por: <span>$ {total_paid}</span>
         </p>
       </Header>
       <Footer>

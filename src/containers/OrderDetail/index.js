@@ -6,16 +6,19 @@ export const OrderDetail = ({ order }) => {
   const { id, total, products, change, payment, client, date } = order
   const [day, time] = formatDate(date)
 
+  const getPayment = (payment) => {
+    if (payment === 1) {
+      return 'Efectivo'
+    } else if (payment === 2) {
+      return 'Tarjeta de Débito'
+    }
+  }
+
   return (
     <>
       <Header>
         <h2>Orden #{id}</h2>
         <Info>
-          <div>
-            <p>
-              Vendido por: <span>Joseph Salen</span>
-            </p>
-          </div>
           <div>
             <p>
               Cliente: <span>{client || 'Sin identificar'}</span>
@@ -34,7 +37,7 @@ export const OrderDetail = ({ order }) => {
 
       <Footer>
         <p>
-          Método de Pago: <span>{payment}</span>
+          Método de Pago: <span>{getPayment(payment)}</span>
         </p>
         <p>
           Vuelto: <span>${change}</span>
