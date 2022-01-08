@@ -1,7 +1,6 @@
 import { Sales } from './styles'
 
 export const ResumeSales = ({ cash, card, change }) => {
-  console.log({ cash, card, change })
   const total = cash + card - change
 
   return (
