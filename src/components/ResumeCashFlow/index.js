@@ -8,13 +8,13 @@ export const ResumeCashFlow = ({ cash, card, opening, change }) => {
     <CashFlow>
       <header>
         <p>Resumen de Caja</p>
-        <p>${finalAmount()}</p>
+        <p>${finalAmount().toFixed(2)}</p>
       </header>
 
       <CashDetails>
         <header>
           <p>Total Efectivo</p>
-          <p>+ $ {getTotalCash()}</p>
+          <p>+ $ {getTotalCash().toFixed(2)}</p>
         </header>
 
         <article>
