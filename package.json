@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Inventory and Sales System",
   "main": "src/index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack serve --mode=development"
