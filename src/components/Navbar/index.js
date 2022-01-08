@@ -47,9 +47,6 @@ export const Navbar = () => {
             <Link to='/close' onClick={() => handleToggle}>
               <AiOutlineCloseSquare /> Cerrar Caja
             </Link>
-            <Link to='/logout' onClick={() => handleToggle}>
-              <MdLogout /> Cerrar sesión
-            </Link>
           </Menu>
         </Container>
       )}

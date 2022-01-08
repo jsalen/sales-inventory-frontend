@@ -26,7 +26,7 @@ export const Menu = styled.div`
   top: 0;
   left: 0;
   width: 184px;
-  height: 316px;
+  height: auto;
   display: flex;
   flex-direction: column;
   background-color: #f8f7ff;
