@@ -6,14 +6,13 @@ import { Modal } from '../Modal'
 import { Footer, Form, FormGroup, ModalButton, ModalContainer } from './styles'
 
 export const OpeningAmountModal = ({ handleModal }) => {
-  const [value, setValue] = useState(0)
+  const [amount, setAmount] = useState(0)
   const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    dispatch(setOpeningAmount({ amount: Number(value) }))
-
+    dispatch(setOpeningAmount({ amount }))
     handleModal()
   }
 
@@ -25,14 +24,15 @@ export const OpeningAmountModal = ({ handleModal }) => {
           <FormGroup>
             <label htmlFor='stock'>Ingresar Monto</label>
             <input
-              type='text'
+              type='number'
               name='stock'
-              pattern='([0-9]*[.])?[0-9]+'
+              pattern='[0-9]+'
               title='Solo se permiten números'
               min='0'
+              step='0.001'
               autoFocus
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
             />
           </FormGroup>
           <Footer>
