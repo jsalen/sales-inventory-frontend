@@ -3,7 +3,7 @@ import { CloseCashierCard } from '../../components/CloseCashierCard'
 import { OpeningAmountModal } from '../../components/OpeningAmountModal'
 import { ResumeCashFlow } from '../../components/ResumeCashFlow'
 import { ResumeSales } from '../../components/ResumeSales'
-import { formatDate, getTotal } from '../../helpers'
+import { formatDate, getTotal, getTotalChange } from '../../helpers'
 
 import {
   Container,
@@ -22,6 +22,9 @@ export const Close = () => {
   const [day, time] = formatDate(date)
   const getTotalCash = getTotal(1)
   const getTotalCard = getTotal(2)
+  const change = getTotalChange()
+
+  console.log(change)
 
   const handleOpeningModal = () => setOpeningModal((prev) => !prev)
 
@@ -36,7 +39,7 @@ export const Close = () => {
         <p>Cierre de Caja</p>
       </Header>
       <Content>
-        <ResumeSales cash={getTotalCash} card={getTotalCard} change={100} />
+        <ResumeSales cash={getTotalCash} card={getTotalCard} change={change} />
         <ResumeCashFlow
           cash={680}
           card={600}

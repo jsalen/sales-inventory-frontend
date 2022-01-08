@@ -39,15 +39,16 @@ export const SalesModal = ({ handleModal }) => {
     setCreateClientModal((prev) => !prev)
   }
 
-  const getChange = () => (totalPaid - total).toFixed(2)
+  const getChange = (totalPaid - total).toFixed(2)
 
   const handleSubmit = () => {
     const order = {
       products,
       total: Number(total.toFixed(2)),
-      change: Number(getChange()),
-      client,
+      total_paid: Number(totalPaid),
+      change: Number(getChange),
       payment: Number(payment),
+      client,
     }
 
     dispatch(createOrder({ order }))
@@ -116,7 +117,7 @@ export const SalesModal = ({ handleModal }) => {
             </article>
             <article>
               <p>Vuelto:</p>
-              <span>$ {getChange() || 0}</span>
+              <span>$ {getChange || 0}</span>
             </article>
           </TotalBox>
         </Content>
