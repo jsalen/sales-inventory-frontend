@@ -30,7 +30,6 @@ export const OpeningAmountModal = ({ handleModal }) => {
               pattern='([0-9]*[.])?[0-9]+'
               title='Solo se permiten números'
               min='0'
-              step='0.01'
               autoFocus
               value={value}
               onChange={(e) => setValue(e.target.value)}

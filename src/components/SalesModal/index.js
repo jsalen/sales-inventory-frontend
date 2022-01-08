@@ -100,7 +100,6 @@ export const SalesModal = ({ handleModal }) => {
               pattern='([0-9]*[.])?[0-9]+'
               title='Solo se permiten números'
               min='0'
-              step='0.01'
               placeholder={total.toFixed(2)}
               onChange={handleChange}
             />
