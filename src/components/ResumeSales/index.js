@@ -1,6 +1,8 @@
 import { Sales } from './styles'
 
-export const ResumeSales = ({ cash, card, total, change }) => {
+export const ResumeSales = ({ cash, card, change }) => {
+  const total = cash + card - change
+
   return (
     <Sales>
       <header>
