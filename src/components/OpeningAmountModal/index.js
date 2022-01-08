@@ -1,15 +1,19 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { setOpeningAmount } from '../../features/cashier/cashierSlice'
 import { Modal } from '../Modal'
 
 import { Footer, Form, FormGroup, ModalButton, ModalContainer } from './styles'
 
-export const OpeningAmountModal = ({ setOpeningAmount, handleModal }) => {
+export const OpeningAmountModal = ({ handleModal }) => {
   const [value, setValue] = useState('')
+  const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    setOpeningAmount(Number(value))
+    dispatch(setOpeningAmount({ amount: Number(value) }))
+
     handleModal()
   }
 

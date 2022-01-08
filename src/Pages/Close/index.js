@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { CloseCashierCard } from '../../components/CloseCashierCard'
 import { OpeningAmountModal } from '../../components/OpeningAmountModal'
 import { ResumeCashFlow } from '../../components/ResumeCashFlow'
@@ -16,7 +17,7 @@ import {
 } from './styles'
 
 export const Close = () => {
-  const [openingAmount, setOpeningAmount] = useState(0)
+  const { opening } = useSelector((state) => state.cashier)
   const [openingModal, setOpeningModal] = useState(false)
   const date = new window.Date()
   const [day, time] = formatDate(date)
@@ -41,7 +42,7 @@ export const Close = () => {
         <ResumeCashFlow
           cash={getTotalCash}
           card={getTotalCard}
-          opening={openingAmount}
+          opening={opening}
           change={change}
         />
       </Content>
@@ -57,12 +58,7 @@ export const Close = () => {
         </Options>
       </Footer>
 
-      {openingModal && (
-        <OpeningAmountModal
-          setOpeningAmount={setOpeningAmount}
-          handleModal={handleOpeningModal}
-        />
-      )}
+      {openingModal && <OpeningAmountModal handleModal={handleOpeningModal} />}
     </Container>
   )
 }
