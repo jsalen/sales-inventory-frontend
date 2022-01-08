@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = (env, args) => {
   const { mode } = args
@@ -9,6 +10,7 @@ module.exports = (env, args) => {
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: isProduction ? '[name].[contenthash].js' : 'main.js',
+      publicPath: '/',
     },
     devServer: {
       port: 3000,
@@ -50,7 +52,13 @@ module.exports = (env, args) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: 'public/index.html',
+        template: './public/index.html',
+      }),
+      new CopyPlugin({
+        patterns: [
+          { from: 'public/manifest.json', to: '' },
+          { from: 'public/assets/icon.png', to: 'assets' },
+        ],
       }),
     ],
   }

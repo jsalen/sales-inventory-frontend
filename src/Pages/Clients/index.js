@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { ClientCreateForm } from '../../components/ClientCreateForm'
 import { EmptyContainer } from '../../components/EmptyContainer'
 import { FilterBoard } from '../../components/FilterBoard'
+import { MetaHead } from '../../components/MetaHead'
 import { Modal } from '../../components/Modal'
 import { ClientsTable } from '../../containers/ClientsTable'
 import empty from '../../images/no-clients.png'
@@ -11,6 +12,15 @@ import useFilterClients from '../../hooks/useFilterClients'
 import { MdOutlineAdd } from 'react-icons/md'
 
 import { Button, Container, Footer, Tooltip } from './styles'
+
+const meta = (
+  <MetaHead
+    title='Clientes'
+    description='Lista de Clientes'
+    image='https://davecast.s3.amazonaws.com/avatarnegativo.jpg'
+    url='https://fake-platzi-store-merch.web.app/'
+  />
+)
 
 export const Clients = () => {
   const [createClientModal, setCreateClientModal] = useState(false)
@@ -27,6 +37,7 @@ export const Clients = () => {
 
   return (
     <>
+      {meta}
       <Container>
         <FilterBoard
           title='Clientes'
