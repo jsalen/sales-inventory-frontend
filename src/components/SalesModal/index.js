@@ -4,6 +4,7 @@ import { createOrder } from '../../features/orders/ordersSlice'
 import { clearCart } from '../../features/cart/cartSlice'
 import { ClientCreateForm } from '../ClientCreateForm'
 import { Modal } from '../Modal'
+import { fixNumber } from '../../helpers'
 
 import { MdOutlineAdd } from 'react-icons/md'
 
@@ -39,12 +40,12 @@ export const SalesModal = ({ handleModal }) => {
     setCreateClientModal((prev) => !prev)
   }
 
-  const getChange = (totalPaid - total).toFixed(2)
+  const getChange = fixNumber(totalPaid - total)
 
   const handleSubmit = () => {
     const order = {
       products,
-      total: Number(total.toFixed(2)),
+      total: fixNumber(total),
       total_paid: Number(totalPaid),
       change: Number(getChange),
       payment: Number(payment),

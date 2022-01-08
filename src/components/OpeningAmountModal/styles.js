@@ -66,6 +66,18 @@ export const FormGroup = styled.div`
     padding: 8px;
     caret-color: #9381ff;
 
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type='number'] {
+      -moz-appearance: textfield;
+    }
+
     &:focus {
       outline: 1px solid #b8b8ff;
     }

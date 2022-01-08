@@ -1,3 +1,4 @@
+import { fixNumber } from '../../helpers'
 import { Sales } from './styles'
 
 export const ResumeSales = ({ cash, card, change }) => {
@@ -7,7 +8,7 @@ export const ResumeSales = ({ cash, card, change }) => {
     <Sales>
       <header>
         <p>Resumen de Ventas</p>
-        <p>$ {total}</p>
+        <p>$ {fixNumber(total)}</p>
       </header>
 
       <article>

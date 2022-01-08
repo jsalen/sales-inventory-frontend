@@ -22,3 +22,5 @@ export const getTotalChange = () => {
 
   return change
 }
+
+export const fixNumber = (num) => Number.parseFloat(num).toFixed(2)

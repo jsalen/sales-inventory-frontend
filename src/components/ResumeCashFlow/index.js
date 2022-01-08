@@ -1,20 +1,21 @@
+import { fixNumber } from '../../helpers'
 import { CardDetails, CashDetails, CashFlow } from './styles'
 
 export const ResumeCashFlow = ({ cash, card, opening, change }) => {
-  const getTotalCash = () => cash + opening - change
-  const finalAmount = () => getTotalCash() + card
+  const totalCash = cash + opening - change
+  const finalAmount = totalCash + card
 
   return (
     <CashFlow>
       <header>
         <p>Resumen de Caja</p>
-        <p>${finalAmount().toFixed(2)}</p>
+        <p>${fixNumber(finalAmount)}</p>
       </header>
 
       <CashDetails>
         <header>
           <p>Total Efectivo</p>
-          <p>+ $ {getTotalCash().toFixed(2)}</p>
+          <p>+ $ {fixNumber(totalCash)}</p>
         </header>
 
         <article>

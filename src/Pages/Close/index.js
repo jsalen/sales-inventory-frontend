@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { CloseCashierCard } from '../../components/CloseCashierCard'
 import { OpeningAmountModal } from '../../components/OpeningAmountModal'
 import { ResumeCashFlow } from '../../components/ResumeCashFlow'
 import { ResumeSales } from '../../components/ResumeSales'

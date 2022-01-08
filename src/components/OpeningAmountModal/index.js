@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { setOpeningAmount } from '../../features/cashier/cashierSlice'
 import { Modal } from '../Modal'
+import { fixNumber } from '../../helpers'
 
 import { Footer, Form, FormGroup, ModalButton, ModalContainer } from './styles'
 
@@ -11,8 +12,9 @@ export const OpeningAmountModal = ({ handleModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    const fixedNumber = fixNumber(amount)
 
-    dispatch(setOpeningAmount({ amount }))
+    dispatch(setOpeningAmount({ amount: fixedNumber }))
     handleModal()
   }
 
@@ -29,7 +31,7 @@ export const OpeningAmountModal = ({ handleModal }) => {
               pattern='[0-9]+'
               title='Solo se permiten números'
               min='0'
-              step='0.001'
+              step='0.01'
               autoFocus
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
