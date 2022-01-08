@@ -97,7 +97,7 @@ export const SalesModal = ({ handleModal }) => {
             <input
               type='number'
               name='amount'
-              pattern='[0-9]+'
+              pattern='([0-9]*[.])?[0-9]+'
               title='Solo se permiten números'
               min='0'
               step='0.01'
