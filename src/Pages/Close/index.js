@@ -24,8 +24,6 @@ export const Close = () => {
   const getTotalCard = getTotal(2)
   const change = getTotalChange()
 
-  console.log(change)
-
   const handleOpeningModal = () => setOpeningModal((prev) => !prev)
 
   return (
@@ -41,10 +39,10 @@ export const Close = () => {
       <Content>
         <ResumeSales cash={getTotalCash} card={getTotalCard} change={change} />
         <ResumeCashFlow
-          cash={680}
-          card={600}
+          cash={getTotalCash}
+          card={getTotalCard}
           opening={openingAmount}
-          change={100}
+          change={change}
         />
       </Content>
       <Footer>
