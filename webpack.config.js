@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -8,6 +7,9 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'main.js',
     publicPath: '/',
+  },
+  resolve: {
+    extensions: ['.js'],
   },
   devServer: {
     port: 3000,
@@ -20,7 +22,6 @@ module.exports = {
     compress: true,
     historyApiFallback: true,
   },
-  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -38,6 +39,14 @@ module.exports = {
         },
       },
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
@@ -51,12 +60,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'public/manifest.json', to: '' },
-        { from: 'public/assets/icon.png', to: 'assets' },
-      ],
     }),
   ],
 }
