@@ -9,12 +9,15 @@ import { Sales } from '../Pages/Sales'
 export const Routing = () => {
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/sales' element={<Sales />} />
-      <Route path='/clients' element={<Clients />} />
-      <Route path='/inventory' element={<Inventory />} />
-      <Route path='/reports' element={<Reports />} />
-      <Route path='/close' element={<Close />} />
+      <Route path='/sales-inventory-frontend/' element={<Home />} />
+      <Route path='/sales-inventory-frontend/sales' element={<Sales />} />
+      <Route path='/sales-inventory-frontend/clients' element={<Clients />} />
+      <Route
+        path='/sales-inventory-frontend/inventory'
+        element={<Inventory />}
+      />
+      <Route path='/sales-inventory-frontend/reports' element={<Reports />} />
+      <Route path='/sales-inventory-frontend/close' element={<Close />} />
     </Routes>
   )
 }

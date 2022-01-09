@@ -19,13 +19,13 @@ export const Home = () => {
     <>
       {meta}
       <Container>
-        <Link to='/sales'>
+        <Link to='/sales-inventory-frontend/sales'>
           <MenuCard>
             <MdOutlinePointOfSale size='160' />
             <p>Punto de Venta</p>
           </MenuCard>
         </Link>
-        <Link to='/inventory'>
+        <Link to='/sales-inventory-frontend/inventory'>
           <MenuCard>
             <MdOutlineInventory size='160' />
             <p>Inventario</p>

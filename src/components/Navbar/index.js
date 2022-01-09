@@ -25,26 +25,41 @@ export const Navbar = () => {
       {open && (
         <Container onClick={handleToggle}>
           <Menu>
-            <Link to='/' onClick={() => handleToggle}>
+            <Link to='/sales-inventory-frontend/' onClick={() => handleToggle}>
               <MdOutlineHome /> Inicio
             </Link>
 
-            <Link to='/sales' onClick={() => handleToggle}>
+            <Link
+              to='/sales-inventory-frontend/sales'
+              onClick={() => handleToggle}
+            >
               <MdOutlineShoppingCart /> Vender
             </Link>
 
-            <Link to='/clients' onClick={() => handleToggle}>
+            <Link
+              to='/sales-inventory-frontend/clients'
+              onClick={() => handleToggle}
+            >
               <AiOutlineUser /> Clientes
             </Link>
-            <Link to='/inventory' onClick={() => handleToggle}>
+            <Link
+              to='/sales-inventory-frontend/inventory'
+              onClick={() => handleToggle}
+            >
               <MdOutlineInventory2 /> Inventario
             </Link>
 
-            <Link to='/reports' onClick={() => handleToggle}>
+            <Link
+              to='/sales-inventory-frontend/reports'
+              onClick={() => handleToggle}
+            >
               <MdOutlineDocumentScanner /> Reportes
             </Link>
 
-            <Link to='/close' onClick={() => handleToggle}>
+            <Link
+              to='/sales-inventory-frontend/close'
+              onClick={() => handleToggle}
+            >
               <AiOutlineCloseSquare /> Cerrar Caja
             </Link>
           </Menu>
