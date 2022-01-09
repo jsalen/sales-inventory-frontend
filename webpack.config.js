@@ -7,6 +7,7 @@ module.exports = (env, args) => {
   const isProduction = mode === 'production'
 
   return {
+    entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: isProduction ? '[name].[contenthash].js' : 'main.js',
