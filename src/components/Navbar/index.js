@@ -26,13 +26,6 @@ export const Navbar = () => {
         <Container onClick={handleToggle}>
           <Menu>
             <Link to='/sales-inventory-frontend/' onClick={() => handleToggle}>
-              <MdOutlineHome /> Inicio
-            </Link>
-
-            <Link
-              to='/sales-inventory-frontend/sales'
-              onClick={() => handleToggle}
-            >
               <MdOutlineShoppingCart /> Vender
             </Link>
 
