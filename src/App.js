@@ -1,15 +1,15 @@
-import { Fragment } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { Routing } from './routes'
 import GlobalStyles from './styles/GlobalStyles'
 
 const App = () => {
   return (
-    <Fragment>
+    <BrowserRouter>
       <GlobalStyles />
       <Navbar />
       <Routing />
-    </Fragment>
+    </BrowserRouter>
   )
 }
 
