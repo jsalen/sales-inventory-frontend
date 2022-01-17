@@ -2,11 +2,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import {
-  MdLogout,
   MdOutlineShoppingCart,
   MdOutlineInventory2,
   MdOutlineDocumentScanner,
-  MdOutlineHome,
 } from 'react-icons/md'
 import { AiOutlineUser, AiOutlineCloseSquare } from 'react-icons/ai'
 
@@ -21,38 +19,26 @@ export const Navbar = () => {
 
   return (
     <Nav open={open}>
-      <Btn onClick={handleToggle}>Opciones</Btn>
+      <Btn onClick={handleToggle}>Menú</Btn>
       {open && (
         <Container onClick={handleToggle}>
           <Menu>
-            <Link to='/sales-inventory-frontend/' onClick={() => handleToggle}>
+            <Link to='/' onClick={() => handleToggle}>
               <MdOutlineShoppingCart /> Vender
             </Link>
 
-            <Link
-              to='/sales-inventory-frontend/clients'
-              onClick={() => handleToggle}
-            >
+            <Link to='/clients' onClick={() => handleToggle}>
               <AiOutlineUser /> Clientes
             </Link>
-            <Link
-              to='/sales-inventory-frontend/inventory'
-              onClick={() => handleToggle}
-            >
+            <Link to='/inventory' onClick={() => handleToggle}>
               <MdOutlineInventory2 /> Inventario
             </Link>
 
-            <Link
-              to='/sales-inventory-frontend/reports'
-              onClick={() => handleToggle}
-            >
+            <Link to='/reports' onClick={() => handleToggle}>
               <MdOutlineDocumentScanner /> Reportes
             </Link>
 
-            <Link
-              to='/sales-inventory-frontend/close'
-              onClick={() => handleToggle}
-            >
+            <Link to='/close' onClick={() => handleToggle}>
               <AiOutlineCloseSquare /> Cerrar Caja
             </Link>
           </Menu>
