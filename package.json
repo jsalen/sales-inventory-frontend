@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Inventory and Sales System",
   "main": "src/index.js",
-  "homepage": "https://github.com/jsalen/sales-inventory-frontend/tree/gh-pages",
+  "homepage": "/",
   "engines": {
     "node": "16.x"
   },
