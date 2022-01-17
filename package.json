@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Inventory and Sales System",
   "main": "src/index.js",
+  "homepage": "https://jsalen.github.io/sales-inventory-frontend/",
   "engines": {
     "node": "16.x"
   },
