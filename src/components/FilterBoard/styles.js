@@ -5,16 +5,14 @@ export const Container = styled.section`
   height: 96px;
   display: grid;
   grid-template-columns: 70% 1fr;
-  grid-template-areas:
-    'main aside'
-    'main aside';
+  grid-template-rows: 35px 1fr;
   background-color: #f8f7ff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
 `
 
 export const Header = styled.header`
   grid-column: 1 / 2;
-  grid-row: 1 / -1;
+  grid-row: 2 / -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,19 +21,6 @@ export const Header = styled.header`
   & h1 {
     font-size: 24px;
   }
-`
-
-export const Select = styled.select`
-  width: 212px;
-  padding: 3px;
-  background: #f8f7ff;
-  border: 1px solid #b8b8ff;
-  border-radius: 4px;
-  color: #2e265e;
-`
-
-export const Title = styled.p`
-  font-weight: 700;
 `
 
 export const Button = styled.button`

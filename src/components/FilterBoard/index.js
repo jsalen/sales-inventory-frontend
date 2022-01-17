@@ -1,14 +1,6 @@
 import { SearchBar } from '../SearchBar'
 
-import {
-  Container,
-  Title,
-  Alphabet,
-  Search,
-  Header,
-  Button,
-  Select,
-} from './styles'
+import { Container, Search, Header, Button } from './styles'
 
 export const FilterBoard = ({ title, placeHolder, query, setQuery }) => {
   return (
