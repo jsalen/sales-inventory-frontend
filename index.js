@@ -1665,4 +1665,34 @@
     overflow-x: hidden;
     min-height: 100vh;
   }
-`,yu=gu,vu=()=>(0,Xr.jsxs)(Gt,{children:[(0,Xr.jsx)(yu,{}),(0,Xr.jsx)(Jr,{}),(0,Xr.jsx)(mu,{})]});e.render((0,Xr.jsx)(s,{store:gt,children:(0,Xr.jsx)(vu,{})}),document.getElementById("app"))})()})();
+`,yu=gu,vu=Vr.article`
+  width: 340px;
+  padding: 16px;
+  display: grid;
+  grid-template-rows: 38px 1fr;
+  grid-gap: 16px;
+  background: #f8f7ff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+
+  & h1 {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid #cecece;
+  }
+`,bu=Vr.button`
+  width: 130px;
+  height: 35px;
+  margin: 0 auto;
+  color: #f8f7ff;
+  background: #9381ff;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    background: #f8f7ff;
+    border: 1px solid #9381ff;
+    color: #9381ff;
+  }
+`,xu=({setWarningModal:e})=>(0,Xr.jsx)(ba,{children:(0,Xr.jsxs)(vu,{children:[(0,Xr.jsx)("h1",{children:"Atención"}),(0,Xr.jsx)("p",{children:"Este sitio web no está optimizado para el uso en dispositivos móviles, ya que su funcionalidad está creada para el uso en una Caja Registradora de un local comercial."}),(0,Xr.jsx)(bu,{onClick:t=>e(!t),children:"Aceptar"})]})}),wu=()=>{const[e,n]=(0,t.useState)(!0);return(0,Xr.jsxs)(Gt,{children:[(0,Xr.jsx)(yu,{}),(0,Xr.jsx)(Jr,{}),(0,Xr.jsx)(mu,{}),e&&(0,Xr.jsx)(xu,{setWarningModal:n})]})};e.render((0,Xr.jsx)(s,{store:gt,children:(0,Xr.jsx)(wu,{})}),document.getElementById("app"))})()})();
